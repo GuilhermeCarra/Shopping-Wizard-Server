@@ -5,8 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="script.js"></script>
-    <script src="https://kit.fontawesome.com/de217cab6a.js" crossorigin="anonymous"></script>
     <title>Jordan shoes</title>
 </head>
 
@@ -295,6 +293,8 @@
         </div>
 
     </div>
+    <script src="./assets/js/script.js"></script>
+    <script src="https://kit.fontawesome.com/de217cab6a.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
