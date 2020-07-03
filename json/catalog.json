@@ -1,0 +1,16 @@
+{
+  "last_id": 0,
+  "0": {
+    "name": "Mock Sneakers",
+    "size": {
+      "38": 19.95,
+      "39": 21.95,
+      "40": 23.95
+    },
+    "color": [
+      "Black",
+      "White",
+      "Red"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "213214": {
+    "step": 2,
+    "profile": {
+      "username": "beronidas",
+      "email": "test@test.com",
+      "password": "123456"
+    },
+    "adress": {
+      "firstname": "",
+      "lastname": "",
+      "birthday": "",
+      "adress1": "",
+      "adress2": "",
+      "postalCode": "",
+      "country": "",
+      "phonePrefix": "",
+      "phoneNumber": "",
+      "regular": true
+    },
+    "shiping": {
+      "type": "",
+      "gift": false,
+      "giftMesage": "",
+      "giftImage": ""
+    },
+    "tos": false,
+    "creationDate": 1593787854,
+    "lastModification": 1593789854,
+    "timeremaining": 3000000
+  }
+}
