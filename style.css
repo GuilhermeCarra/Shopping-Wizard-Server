@@ -1,0 +1,636 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+/*Reset margins to 0*/
+
+* {
+    margin: 0;
+    padding:0;
+    font-family: 'Ubuntu', sans-serif;
+    color: #222;
+    outline:0px none;
+}
+
+
+/*Styling the header with logo*/
+
+header, footer {
+height: 10vh;
+width: 100%;
+background-color: rgb(226, 226, 226);
+}
+
+#box_1_main{
+    margin: 0 8%;
+    width:92%;
+}
+
+.logo {
+    padding: 2vw 5vw;
+}
+
+/*Applying flex layout*/
+.d__flex {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+/*Style and layout for the left part containing small preview pictures and main large picture*/
+
+#ml_preview {
+    display: flex;
+    flex-flow: column nowrap;
+    width:10%;
+}
+
+.ml_preview_image{
+    width:100%;
+    margin: 0.2vw 0;
+    cursor: zoom-in;
+}
+
+.ml_preview_image:hover{
+    filter: brightness(85%);
+}
+
+#ml_image{
+    width:90%;
+    
+}
+
+.ml_big_image{
+    margin:0 5%;
+    width: 90%;
+}
+
+/*Layout of the containers of the left and right parts*/
+
+.main_left{
+    width:40vw;
+    padding:5vw;
+}
+
+.main_right{
+    width:40vw;
+    padding:5vw;
+}
+
+/*Style for the preview images with colors*/
+
+.mr_color_image{
+    width: 15%;
+    cursor: pointer;
+}
+
+/*Style for the dropdown list with sizes*/
+
+#size_selector {
+    background-color: white;
+    border: 2px solid #222;
+    border-radius: 10px;
+    width: 140px;
+    height: 20px;
+    outline:0px none;
+}
+
+/*Style for the black button - Buy*/
+#f_required_buynow{
+    display: none;
+}
+
+.black_button {
+    background-color: #222;
+    color: white;
+    font-size: 18px;
+    border: transparent solid 2px;
+    border-radius: 5px;
+    padding: 0.3vw;
+    margin:2vw 0;
+    margin-right: 4vw;
+    width: 20%;
+    cursor: pointer;
+    outline:0px none;
+    transition: all 0.1s;    
+   
+}
+
+.black_button:hover {
+    color: #222;
+    background-color: #eee;
+    border: #222 solid 2px;
+}
+
+.clear_button{
+    background-color: #fff;
+    color: black;
+    font-size: 18px;
+    border: 2px solid #222;
+    border-radius: 5px;
+    margin:2vw;
+    width: 30%;
+    cursor: pointer;  
+    outline:0px none;
+    transition: all 0.1s;
+    font-weight:200;
+    transition: all 0.1s; 
+}
+
+footer .main_right{
+    margin:0;
+    padding:0;
+    margin-top:-0.5vw;
+}
+
+/*Style for the footer*/
+
+footer {
+    text-align: center;
+    padding-top: 5vh;
+}
+
+footer[class="reverse_row"]{
+    padding-top:0;
+}
+
+.reverse_row{
+    display: flex;
+    flex-flow: row-reverse wrap;
+}
+
+.clear_button:hover {
+    color: #eee;
+    background-color: #222;
+    border: transparent solid 2px;
+}
+
+
+
+/*Style for texts of the page*/
+.main_normal_text{
+    padding:1% 0; 
+    width:100%;
+    box-sizing: border-box;
+}
+
+#box_0 .main_normal_text{
+    font-weight: 700;
+}
+
+
+/*PHASE 2 FORM CSS*/
+
+#time_alert {
+    position: fixed;
+    right: 10vw;
+    top: 22vh;
+    height: 7vh;
+    width: 30vh;
+    padding: 2vh;
+    background-color: none;
+    color: black;
+    font-size: 15px;
+    border-radius: 2px;
+}
+
+/*--------------header whith radio divs and a connector------------------------*/
+
+
+ul{
+    list-style: none;
+    width: 100%;
+    height: 100%;
+}
+
+li{
+    padding-top:2%;
+    height:100%;
+    width:25%;
+    text-align: center;
+    margin: auto 0;
+    font-weight: bold;
+}
+
+.div_circle{
+    width:2vw;
+    height:2vw;
+    border: #333 solid 2px;
+    border-radius: 50%;
+    background-color:white;
+    margin: 5px auto;
+}
+
+.connector{
+    background-color: #bbb; 
+    width:76%; 
+    height:9%; 
+    position:absolute; 
+    left:12%; 
+    top:45%; 
+    z-index: 0;
+}
+
+.flex_column{
+    display:flex;
+    flex-flow:column wrap;
+}
+
+h2 {
+    padding: 3vh 0;
+}
+
+/*---------------forms inputs---------------------*/
+
+#FormPage main{
+    margin-left: 10vw;
+}
+
+#FormPage h3{
+    margin-bottom: 1vw;
+}
+
+#FormPage label{
+    display: inline-block;
+    margin-bottom: 1vh;
+    margin-right: -120px;
+}
+
+#FormPage input, #FormPage select{
+    border: #222 solid 2px;
+    border-radius: 2px;
+    padding: 1vh;
+    width: 250px;
+    display: inline-block;
+}
+
+#FormPage .radio {
+    width: auto;
+}
+
+#FormPage input, #FormPage select, textarea, #gift_text>label:last-of-type{
+    border: #222 solid 2px;
+    border-radius: 3px;
+    padding: 1vh;
+    width: 260px;
+}
+
+
+#FormPage select{
+    margin-right: -2px;
+    padding: 0.93vh;
+    width: 200px;
+}
+
+.fix{
+ position: inline-block; 
+ left: 20px;
+ width:80%;
+}
+
+
+#FormPage .radio {
+    width: 20px;
+}
+
+#estimate {
+    font-size: 15px;
+    color: grey;
+}
+
+#shipping_details {
+    margin-top: 2%;
+}
+
+#FormPage input:focus{
+    border: #777 solid 2px;
+    color: #555;
+}
+
+#FormPage select:hover{
+    cursor: pointer;
+    border: #777 solid 2px;
+}
+
+.background_white{
+    background-color: white;
+} 
+
+#FormPage select[name="Phone"]{
+    width:80px;
+    text-align: center;
+}
+
+#FormPage input[type="tel"]{
+    width:180px;    
+}
+#FormPage .country_names{
+     width:278px;
+     height: 40px;
+}
+
+
+/* div.fileinputs {
+    position: relative;
+
+}
+
+div.fakefile {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+}
+input.file {
+    position: relative;
+    text-align: right;
+    -moz-opacity: 0;
+    filter: alpha(opacity: 0);
+    opacity: 0;
+    z-index: 2;
+}
+.img_file{
+    position: relative;
+
+} */
+
+
+/*-------------------------file input--------------------------*/
+
+file{
+    border:gray solid 1px;
+    border-radius: 3px;
+    width:268px;
+    height:30px;
+}
+
+/*------------------Error message for inputs-------------------*/
+
+.input_error label{
+    color:rgb(182, 33, 33);
+}
+
+#FormPage .input_error>input{
+    border-color:rgb(182, 33, 33);
+}
+
+.input_error::after{
+    margin-top: 7px;
+    border-radius: 4px;
+    width : 265px;
+    height : 30px;
+    display: block;
+    content: "Please, follow the example in the box";
+    background-color: rgb(255, 207, 207);
+    color: rgb(136, 20, 20);
+    text-align: center;
+    line-height: 30px;
+    font-size:80%;
+}
+
+fieldset{
+    border:none;    
+    margin-bottom: 2vh;
+}
+
+.background_grey{
+    background-color: rgb(226, 226, 226);
+}
+
+.required_dot{
+    color: red;
+}
+
+
+
+/*---------------------box_4(step 4, finish) styles--------------------------------------*/
+.final_info {
+    padding-left: 7%;
+}
+
+#final_color {
+    border: 1px solid grey;
+    height: 10px;
+    width: 10px;
+    display: inline-block;
+    margin-left: 3px;
+}
+
+#finish_image {
+    width: 50%;
+    height: 30%;
+    padding-bottom: 5%;
+}
+
+#box_4>.d__flex{
+    justify-content: space-between;
+}
+
+#box_4 .main_left{
+    border: rgb(178, 178, 178) solid 1px;
+    border-radius: 3px;
+    width:45vw;
+    padding:40px;
+    padding-bottom:10px;
+    margin-bottom:50px;
+}
+
+#box_4 h2:first-of-type{
+    margin-bottom:50px;
+}
+
+#box_4 .main_right{
+    height:170px;
+    padding:20px;
+    padding-top:10px;
+    width:25vw;
+    margin-right: 7vw;
+    margin-bottom: 50px;
+    border: rgb(178, 178, 178) solid 1px;
+    border-radius: 3px;
+}
+
+#box_4 .black_button{
+    width:120px;
+}
+
+.grey_line {
+    border-bottom: 1px solid #cccccc;
+}
+
+#final_product_name {
+    padding: 2vh 0;
+}
+
+.finish_padding {
+    padding: 2vh 0;
+}
+
+/*-------------------margin between boxes footer and header---------------------------*/
+
+#box_1,#box_2,#box_3,#box_4{
+    margin:60px 0;
+}
+
+/*-------------------changes of classes for size--------------------------------------*/
+
+
+@media only screen and (min-width:1451px){
+    .connector{
+        top:62%;
+    }
+    #FormPage header{
+        height:115px;
+    }
+    .div_circle{
+        height:30px;
+        width:30px;
+    }
+}
+
+@media screen and (max-width:1600px){
+}
+
+@media only screen and (max-width:1450px){
+    
+    .connector{
+        top:50%;
+    }
+    #FormPage header{
+        height:115px;
+    }
+    .div_circle{
+        height:30px;
+        width:30px;
+    }
+}
+
+@media screen and (max-width:1024px){
+    .div_circle{
+        width:2vw;
+        height:2vw;
+    }
+    .main_left{
+        width:90vw;
+    }
+    .main_right{
+        width:90vw;
+    }
+    .d__flex{
+        flex-wrap:wrap;
+    }   
+    .main_left .d__flex{
+        flex-wrap:nowrap;
+    }
+    #box_1_main{
+        margin:0;
+    }
+    #box_4 .main_left{
+        width:70vw;
+        margin-right:50px;
+    }
+    #box_4 .main_right{
+        width:40vw;
+        padding:10px;
+    }
+    #FormPage header{
+        height:110px;
+    }
+}
+@media only screen and (max-width:900px){
+    .connector{
+        top:75%;
+    }
+    #FormPage header{
+        height:60px;
+    }
+}
+@media only screen and (max-width:800px){
+    .connector{
+        top:75%;
+    }
+}
+@media screen and (max-width:750px){
+    .connector{
+        top:70%;
+    }
+}
+@media screen and (max-width:700px){
+    .connector{
+        top:70%;
+    }
+}
+@media only screen and (max-width:600px){
+    *{
+        font-size: 98%;
+    }
+    .div_circle{
+        border-width: 1px;
+    }
+    li{
+        padding-top:0.5%;
+        font-size: 70%;
+    }
+    #box_4 .d__flex{
+        flex-wrap:wrap;
+    }
+    #finish_image{
+        width:100%;
+    }
+    #box_4 .main_left{
+        padding:10px;
+    }
+    .connector{
+        top:45%;
+    }
+    #FormPage header{
+        height:50px;
+    }
+}  
+
+@media screen and (max-width:400px){
+    #box_1,#box_2,#box_3,#box_4{
+        margin:30px 0;
+    }
+    #FormPage header{
+        height:40px;
+    }
+    .black_button{
+        width:30%;
+      
+    }
+    #FormPage input{
+        width:130px;
+    }
+    .input_error::after{
+        width:146px;
+    }
+    #FormPage select[name="Phone"]{
+        width:65px;
+    }
+    #FormPage select{
+        width:150px;
+    }
+    #FormPage input[type="tel"]{
+        width:70px;
+    }
+    #box_4 .main_right{
+        width:70vw;
+        margin-right: 50px;
+    }
+    .clear_button{
+        width:50%;
+    }
+    footer .main_right{
+        width:100%;
+        height:30px;
+    }
+    footer .black_button{
+        width:40%;
+        height:30px;
+    }
+    .connector{
+        top:50%;
+    }
+}
+::placeholder{
+    
+    opacity: .3;
+}
