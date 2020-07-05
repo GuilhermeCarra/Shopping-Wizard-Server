@@ -12,5 +12,19 @@
       "White",
       "Red"
     ]
+  },
+  "1": {
+    "id": 1,
+    "name": "Zoom Pegasus",
+    "size": {
+      "36": 36.40,
+      "38": 38.20,
+      "39": 40.45
+    },
+    "color": [
+      "Bright Rose",
+      "Champagne",
+      "Black"
+    ]
   }
 }
