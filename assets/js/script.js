@@ -229,3 +229,10 @@ function checkAnswers(answersArr) {
 
     return results;
 }
+
+// NEW FUNCTIONS
+function changePreviewImages(colorNumber) {
+    document.getElementById("ml_image1").src = "assets/img/products/"+ product.id + "-" + product.color[colorNumber] + "-" + 0 + ".jpg";
+    for (let i = 0; i < document.getElementsByClassName("ml_preview_image").length; i++)
+    document.getElementsByClassName("ml_preview_image")[i].src = "assets/img/products/"+ product.id + "-" + product.color[colorNumber] + "-" + i + ".jpg";
+}
