@@ -15,31 +15,39 @@ function productRequest() {
     productReq.open("GET", "get-product.php", true);
     productReq.send();
 }
+
 function eventListenerFunction() {
-    //Hide elements process
+    // Hide elements process
     for(let i = 2; i < 5; i++) document.getElementById("box_"+i).style.display = "none";
     document.getElementById("gift_text").style.display = "none";
     document.getElementById("FormPage").style.display = "none";
 
-    // hoverover mouse to see image in the biger view
-    document.getElementById("ml_preview").addEventListener("mouseover", function (event) {
-        var modId = event.target.id.slice(4, event.target.id.length);
-        // using slice method to take charecter after (4)
-        modId == "review" ? modId = "image1" : "";
+    /*
+        FILLING PAGE WITH THE REQUESTED PRODUCT INFORMATION:
+    */
 
-        // mouseover will change the source of the large picture by adding color, small picture ID and jpg format:  
-        document.getElementById("ml_image1").src = product.color + "/" + modId + ".jpg";
-    })
+    // Product title
+    document.querySelector("#main_title").innerHTML = product.name + " " + product.color[0];
+    // Preview images thumbnails
+    changePreviewImages(0);
+    // Price
+    document.querySelector("#main_show_price").innerHTML = product.size[Object.keys(product.size)[0]] + " €"
+    // Colors options
+    for (let i = 0; i < 3; i ++ ) {
+        document.querySelectorAll(".mr_color_image")[i].dataset.color = i;
+        document.querySelectorAll(".mr_color_image")[i].src = "assets/img/products/"+ product.id + "-" + product.color[i] + "-0.jpg";
+    }
+    // Shoes sizes (select input options)
+    for(let i = 0; i < Object.keys(product.size).length; i++) {
+        let option = document.createElement("option");
+        option.value = Object.keys(product.size)[i];
+        option.innerText = Object.keys(product.size)[i];
+        document.querySelector("#size_selector").appendChild(option);
+    }
 
-    // at mouseout source of the large picture returns back to image1:
-    document.getElementById("ml_preview").addEventListener("mouseout", function () {
-        document.getElementById("ml_image1").src = product.color + "/image1.jpg";
-    })
-    //selecting all the product with diffrent color 
-    document.getElementById("mr_color").addEventListener("click", function (event) {
-        // getting name of the color by clicking small color picture:
-        var modColor = event.target.id.slice(4, event.target.id.length);
-        modColor == "olor" ? modColor = product.color : "";
+    /*
+        USER ACTIONS:
+    */
 
         //changing color value of the product object:
         product.color = modColor;
