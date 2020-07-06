@@ -241,7 +241,7 @@ function printCatalog() {
             $("#products_list").append(
                 $(emptyCol).append(
                     $(card).append(
-                        $(img).attr("src", "assets/img/products/"+Object.keys(catalog)[n]+"-"+catalog[n].color[Object.keys(catalog[n].color)[0]]+"-0.jpg"),
+                        $(img).attr("src", "assets/img/products/"+Object.keys(catalog)[n]+"-"+catalog[n].color[Object.keys(catalog[n].color)[0]]+"-0.jpg").data("id"),
                         $(cardBody).append(
                             $(cardTitle).text(catalog[n].name),
                             $(cardText).text(catalog[n].size[Object.keys(catalog[n].size)[0]] + " €/pc")
