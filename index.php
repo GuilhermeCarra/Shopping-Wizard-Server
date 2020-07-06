@@ -1,5 +1,7 @@
 <?php
     if (!isset($_GET["productId"])) header("Location: homepage.php");
+    session_start();
+    $_SESSION["productId"] = $_GET["productId"];
 ?>
 
 <!DOCTYPE html>
