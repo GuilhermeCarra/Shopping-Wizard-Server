@@ -1,5 +1,5 @@
 <?php
-    if (!isset($_GET["productId"])) header("Location: homepage.php");
+    if (!isset($_GET["productId"])) header("Location: index.php");
     session_start();
     $_SESSION["productId"] = $_GET["productId"];
 ?>

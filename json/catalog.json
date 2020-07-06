@@ -1,7 +1,6 @@
 {
   "last_id": 0,
   "0": {
-    "id": 0,
     "name": "Mock Sneakers",
     "size": {
       "38": 19.95,
@@ -15,7 +14,6 @@
     ]
   },
   "1": {
-    "id": 1,
     "name": "Zoom Pegasus",
     "size": {
       "36": 36.40,
