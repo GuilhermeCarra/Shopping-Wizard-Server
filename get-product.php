@@ -17,6 +17,6 @@
     if ($productJSON == "null") {
         echo "error";
     } else {
-        echo $productJSON;
+        echo "[".$_SESSION['productId']."," .$productJSON . "]";
     }
 ?>
