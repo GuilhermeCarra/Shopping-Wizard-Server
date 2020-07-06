@@ -14,7 +14,7 @@
     <title>Jordan shoes</title>
 </head>
 
-<body onload="eventListenerFunction()">
+<body onload="">
     <div id="box_0">
         <header>
             <div class="logo"><b>LOGO</b></div>
@@ -22,33 +22,31 @@
         <main class="d__flex" id="box_1_main">
             <div class="main_left d__flex">
                 <div id="ml_preview">
-                    <img class="ml_preview_image" id="mlp_image1" src="./assets/img/black/image1.jpg">
+                    <img class="ml_preview_image" id="mlp_image1" src="">
                     <!--Img1-->
-                    <img class="ml_preview_image" id="mlp_image2" src="./assets/img/black/image2.jpg">
+                    <img class="ml_preview_image" id="mlp_image2" src="">
                     <!--Img2-->
-                    <img class="ml_preview_image" id="mlp_image3" src="./assets/img/black/image3.jpg">
+                    <img class="ml_preview_image" id="mlp_image3" src="">
                     <!--Img3-->
-                    <img class="ml_preview_image" id="mlp_image4" src="./assets/img/black/image4.jpg">
+                    <img class="ml_preview_image" id="mlp_image4" src="">
                     <!--Img4-->
-                    <img class="ml_preview_image" id="mlp_image5" src="./assets/img/black/image5.jpg">
+                    <img class="ml_preview_image" id="mlp_image5" src="">
                     <!--Img5-->
                 </div>
                 <div id="ml_image">
-                    <img class="ml_big_image" id="ml_image1" src="./assets/img/black/image1.jpg">
+                    <img class="ml_big_image" id="ml_image1" src="">
                     <!--Img-->
                 </div>
             </div>
             <div class="main_right">
                 <h2 id="main_title">
                     <!--Title-->
-                    Mock Sneakers Black
                 </h2>
                 <div class="main_normal_text">
                     <div class="main_normal_text">
                         <!--Price-->
                         Price
                         <h2 id="main_show_price">
-                            19.95 €
                         </h2>
                     </div>
                     <div class="main_normal_text">
@@ -56,9 +54,6 @@
                         Size
                         <div class="main_size_selector main_normal_text">
                             <select id="size_selector">
-                                <option value="38">38</option>
-                                <option value="39">39</option>
-                                <option value="40">40</option>
                             </select>
                         </div>
                     </div>
@@ -69,11 +64,11 @@
                         <!--color-->
                         Color
                         <div id="mr_color" class="main_normal_text">
-                            <img class="mr_color_image" id="mrc_black" src="./assets/img/black/image1.jpg">
+                            <img class="mr_color_image" src="">
                             <!--Img1-->
-                            <img class="mr_color_image" id="mrc_white" src="./assets/img/white/image1.jpg">
+                            <img class="mr_color_image" src="">
                             <!--Img2-->
-                            <img class="mr_color_image" id="mrc_red" src="./assets/img/red/image1.jpg">
+                            <img class="mr_color_image" src="">
                             <!--Img3-->
                         </div>
                     </div>
