@@ -210,3 +210,7 @@ function checkAnswers(answersArr) {
 
     return results;
 }
+
+//!script admin //
+
+alert("hola");

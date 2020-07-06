@@ -1,14 +1,16 @@
 <?php
 session_start();
-echo $_SESSION['user'];
+// echo $_SESSION['user'];
+
 ?>
+
 <!DOCTYPE html>
     <html lang="en">
     <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>eCommerce</title>
-      <link rel="stylesheet" href="style-admin.css">
+      <link rel="stylesheet" href="..\style-admin.css">
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">  <link rel="stylesheet" href="assets/css/style.css">
     </head>
     <body class="bg-light">
@@ -30,7 +32,7 @@ echo $_SESSION['user'];
           </nav>
         </div>
         <!--Div Table Update Product-->
-        <div class="w-50 text-center bg-white d-none flex-column rounded" id="product-admin">
+        <div class="w-50 text-center bg-white mx-auto d-none flex-column rounded" id="product-admin">
           <h4 class="font-weight-bold mt-3 d-flex justify-content-start p-4">Update Product</h4>
           <input class="form-control p-1 w-75 ml-4 shadow-none search-admin" type="search" placeholder="Search" aria-label="Search" id="search-product-table">
           <div class="table-div table-responsive d-flex p-4">
@@ -48,8 +50,8 @@ echo $_SESSION['user'];
                 <tr>
                   <th scope="row">00001</th>
                   <td>Product name</td>
-                  <td>30</td>
-                  <td>15</td>
+                  <td>38</td>
+                  <td>Blue</td>
                   <td><button type="button" class="btn btn-dark" id="edit-product">Edit</button>
                     <button type="button" class="btn btn-danger">X</button></td>
                 </tr>
@@ -81,7 +83,7 @@ echo $_SESSION['user'];
         </div>
         </div>
         <!--Div Table Update User-->
-        <div class="w-50 text-center bg-white d-none rounded" id="manager-admin">
+        <div class="w-50 text-center bg-white d-none flex-column rounded" id="manager-admin">
           <h4 class="font-weight-bold mt-3 d-flex justify-content-start p-4">Managers</h4>
           <input class="form-control p-1 w-75 ml-4 shadow-none search-admin" type="search" placeholder="Search" aria-label="Search" id="search-user-table">
           <div class="table-div table-responsive d-flex p-4">
@@ -129,7 +131,7 @@ echo $_SESSION['user'];
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-      <script src="/assets/js/main.js"></script>
+      <script src="..\admin-script.js"></script>
     </body>
     </html>
 
