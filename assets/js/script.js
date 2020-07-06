@@ -106,11 +106,11 @@ function eventListenerFunction() {
         document.getElementById("f_date_1").innerHTML = dateStart.toLocaleString();
         document.getElementById("f_date_2").innerHTML = dateEnd.toLocaleString();
     }
-    })
+    });
 
     document.getElementById("f_required_checkbox").addEventListener("change", function(event){
         event.target.checked ? document.getElementById("f_required_buynow").style.display = "block" : document.getElementById("f_required_buynow").style.display = "none";
-    })
+    });
 
     let countryCodes = [376,34,33,49,30]
     let countryNames=["Andorra", "España", "Francia", "Alemania", "Grecia"]
@@ -162,7 +162,6 @@ function buy(){
             if (checked_answers.includes(false)) {
                 for (let i in checked_answers)
                     !checked_answers[i] ? inputArr[i].parentElement.classList.add("input_error") : inputArr[i].parentElement.classList.remove("input_error");
-                    
                 return;
             }
         }
@@ -186,7 +185,6 @@ var warningInterval = setInterval(() => {
 
 var timerSec = 0;
 var timerMin = 0;
- 
 var timerInterval = setInterval (() => {
     timerSec++;
     if (timerSec == 60) {
