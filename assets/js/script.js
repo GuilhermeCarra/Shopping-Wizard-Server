@@ -7,7 +7,7 @@ function productRequest() {
         if (this.responseText.includes("error")) {
             window.location.href = "notfound.php";
         } else {
-            product = JSON.parse(this.responseText);
+            product = JSON.parse(this.responseText)[1];
             eventListenerFunction()
 }
     };
