@@ -70,42 +70,42 @@ function eventListenerFunction() {
         let size = event.target.options[event.target.selectedIndex].value;
         document.getElementById("main_show_price").innerHTML = product.size[size] + " €";
     });
-    
+
     document.getElementById("gift_checkbox").addEventListener("change", function () {
         if (this.checked) document.getElementById("gift_text").style.display = "block";
         else document.getElementById("gift_text").style.display = "none";
     });
 
-   document.getElementById('radio_parent').addEventListener("click", function (event) {
-    if(event.target.name=="shipment") {
-        var dateStart = new Date();
-        var shipmentPrice = 0;
+    document.getElementById('radio_parent').addEventListener("click", function (event) {
+        if(event.target.name=="shipment") {
+            var dateStart = new Date();
+            var shipmentPrice = 0;
 
-        switch (event.target.value) {
-            case "free" :  
-                    dateStart.setDate(dateStart.getDate() + 3);
-                    break;
-            case "extra" : 
-                    dateStart.setDate(dateStart.getDate() + 2);
-                    shipmentPrice = 5;
-                    break;
-            case "prem" : 
-                    dateStart.setDate(dateStart.getDate() + 1); 
-                    shipmentPrice = 10;
-                    break;
+            switch (event.target.value) {
+                case "free" :
+                        dateStart.setDate(dateStart.getDate() + 3);
+                        break;
+                case "extra" :
+                        dateStart.setDate(dateStart.getDate() + 2);
+                        shipmentPrice = 5;
+                        break;
+                case "prem" :
+                        dateStart.setDate(dateStart.getDate() + 1);
+                        shipmentPrice = 10;
+                        break;
+            }
+
+            document.getElementById("f_shipping").innerText = shipmentPrice + ".00 €";
+            document.getElementById("f_total").innerText = product.price + shipmentPrice + " €"; 
+
+            var dateEnd = new Date(dateStart);
+            dateEnd.setHours(dateEnd.getHours() + 6);
+
+            document.getElementById("date_1").innerHTML = dateStart.toLocaleString();
+            document.getElementById("date_2").innerHTML = dateEnd.toLocaleString();
+            document.getElementById("f_date_1").innerHTML = dateStart.toLocaleString();
+            document.getElementById("f_date_2").innerHTML = dateEnd.toLocaleString();
         }
-
-        document.getElementById("f_shipping").innerText = shipmentPrice + ".00 €";
-        document.getElementById("f_total").innerText = product.price + shipmentPrice + " €"; 
-
-        var dateEnd = new Date(dateStart);
-        dateEnd.setHours(dateEnd.getHours() + 6);
-
-        document.getElementById("date_1").innerHTML = dateStart.toLocaleString();
-        document.getElementById("date_2").innerHTML = dateEnd.toLocaleString();
-        document.getElementById("f_date_1").innerHTML = dateStart.toLocaleString();
-        document.getElementById("f_date_2").innerHTML = dateEnd.toLocaleString();
-    }
     });
 
     document.getElementById("f_required_checkbox").addEventListener("change", function(event){
@@ -116,7 +116,7 @@ function eventListenerFunction() {
     let countryNames=["Andorra", "España", "Francia", "Alemania", "Grecia"]
     let selectors=document.querySelectorAll("#box_2 select");
     selectors[0].addEventListener("click",getValue);
-        
+
     function getValue() {
         let countryName=selectors[0].value;
         let index = countryNames.indexOf(countryName);
@@ -167,7 +167,7 @@ function buy(){
         }
 
         clearInterval(warningInterval);
-        timeLeft = 5;  
+        timeLeft = 5;
         divCircles[page].style.backgroundColor = "#888";
         page++;
 
@@ -188,7 +188,7 @@ var timerMin = 0;
 var timerInterval = setInterval (() => {
     timerSec++;
     if (timerSec == 60) {
-        timerMin++; 
+        timerMin++;
         timerSec=0;
     }
 }, 1000);
