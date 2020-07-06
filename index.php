@@ -292,7 +292,6 @@
 
         </main>
         </div>
-
     </div>
     <script src="./assets/js/script.js"></script>
     <script src="https://kit.fontawesome.com/de217cab6a.js" crossorigin="anonymous"></script>

@@ -1,5 +1,6 @@
 var product =[];
 var productFinal = {};
+
 productRequest();
 function productRequest() {
     var productReq = new XMLHttpRequest();
