@@ -1,7 +1,7 @@
 <?php
     session_start();
     // Verifies if was received a productId variable
-    if(!isset($_SESSION['productId'])) header("Location: home-page.php");
+    if(!isset($_SESSION['productId'])) header("Location: index.php");
 
     // Gets the catalog.json
     $catalogJSON = file_get_contents('json/catalog.json');
