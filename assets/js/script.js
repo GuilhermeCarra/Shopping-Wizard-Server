@@ -8,6 +8,7 @@ function productRequest() {
             window.location.href = "notfound.php";
         } else {
             product = JSON.parse(this.responseText)[1];
+            product.id = JSON.parse(this.responseText)[0];
             eventListenerFunction()
 }
     };
