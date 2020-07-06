@@ -1,3 +1,4 @@
+    if (!isset($_GET["productId"])) header("Location: homepage.php");
 <!DOCTYPE html>
 <html lang="en">
 
