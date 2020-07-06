@@ -40,5 +40,5 @@ function printCatalog() {
 }
 
 function requestProduct() {
-    window.location.href = "/product.php?productId="+$(event.target).data("id")
+    window.location.href = "/php-forms/product.php?productId="+$(event.target).data("id")
 }
