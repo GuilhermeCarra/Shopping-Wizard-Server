@@ -655,3 +655,28 @@ fieldset{
     font-size: 172px;
     color: white;
 }
+
+.carousel-h {
+    height: calc(100vh - 65px) !important;
+}
+
+.navbar {
+    height: 65px;
+}
+
+#carousel1{
+    background-image: url('assets/img/carousel/1.jpg');
+}
+
+#carousel2{
+    background-image: url('assets/img/carousel/2.jpg');
+}
+
+#carousel3{
+    background-image: url('assets/img/carousel/3.jpg');
+}
+
+.carousel__img-container{
+    background-size: cover;
+    background-position: center;
+}
