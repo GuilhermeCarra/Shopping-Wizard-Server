@@ -1,14 +1,13 @@
 var product =[];
 var productFinal = {};
 productRequest();
-
 function productRequest() {
     var productReq = new XMLHttpRequest();
     productReq.onload = function() {
         if (this.responseText.includes("error")) {
             window.location.href = "notfound.php";
         } else {
-            product = JSON.parse(this.responseText.substr(1));
+            product = JSON.parse(this.responseText);
             eventListenerFunction()
 }
     };
