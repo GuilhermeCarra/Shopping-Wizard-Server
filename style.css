@@ -659,3 +659,17 @@ fieldset{
     background-size: cover;
     background-position: center;
 }
+
+/*-------------------changes of classes for size--------------------------------------*/
+
+.card-img-top:hover {
+    border-radius: 10%;
+    transform: scale(1.1);
+    box-shadow: rgba(0, 0, 0, 0.267) -1px 1px 4px 0px;
+    transition: 200ms ease-in-out;
+}
+
+.card-img-top {
+    filter: brightness(95%);
+    cursor: pointer;
+}
