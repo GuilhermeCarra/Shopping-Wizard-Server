@@ -21,6 +21,9 @@
                 <li class="layer" data-depth="0.1"><img src="assets/img/404/1.png"></li>
                 <li class="layer" data-depth="0.2"><img src="assets/img/404/2.png"></li>
                 <li class="layer" data-depth="0.4"><img src="assets/img/404/3.png"></li>
+                <li class="layer" data-depth="0">
+                    <span>404</span>
+                </li>
                 <li class="layer" data-depth="0.6"><img src="assets/img/404/4.png"></li>
                 <li class="layer" data-depth="0.8"><img src="assets/img/404/5.png"></li>
                 <li class="layer" data-depth="1.2"><img src="assets/img/404/6.png"></li>
