@@ -1,10 +1,20 @@
-var product = {
-    name: "Mock Sneakers",
-    color: "black",
-    size: 38,
-    price: 19.95
+var product =[];
+var productFinal = {};
+productRequest();
+
+function productRequest() {
+    var productReq = new XMLHttpRequest();
+    productReq.onload = function() {
+        if (this.responseText.includes("error")) {
+            window.location.href = "notfound.php";
+        } else {
+            product = JSON.parse(this.responseText.substr(1));
+            eventListenerFunction()
 }
-// phase 1 start from here
+    };
+    productReq.open("GET", "get-product.php", true);
+    productReq.send();
+}
 function eventListenerFunction() {
     //Hide elements process
     for(let i = 2; i < 5; i++) document.getElementById("box_"+i).style.display = "none";
