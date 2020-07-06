@@ -662,6 +662,11 @@ fieldset{
 
 /*-------------------changes of classes for size--------------------------------------*/
 
+
+/* ----------------------------------------- *
+----------- HOME-PAGE STYLE ---------------- *
+*/
+
 .card-img-top:hover {
     border-radius: 10%;
     transform: scale(1.1);
