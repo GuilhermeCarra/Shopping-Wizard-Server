@@ -11,6 +11,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Page not found</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
 
@@ -21,14 +22,18 @@
                 <li class="layer" data-depth="0.1"><img src="assets/img/404/1.png"></li>
                 <li class="layer" data-depth="0.2"><img src="assets/img/404/2.png"></li>
                 <li class="layer" data-depth="0.4"><img src="assets/img/404/3.png"></li>
-                <li class="layer" data-depth="0">
-                    <span>404</span>
+                <li class="layer w-100 h-100 d-flex justify-content-center align-items-center" style="border: 1px solid blue;" data-depth="0">
+                    <span class="text-404">404</span>
+                    <span class="text-404">Oh no! </span>
                 </li>
                 <li class="layer" data-depth="0.6"><img src="assets/img/404/4.png"></li>
                 <li class="layer" data-depth="0.8"><img src="assets/img/404/5.png"></li>
                 <li class="layer" data-depth="1.2"><img src="assets/img/404/6.png"></li>
             </ul>
         </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
         <script>
