@@ -42,6 +42,8 @@ function printCatalog() {
 function requestProduct() {
     if ((window.location.href).includes("index.php")) {
         var url = (window.location.href).replace("index.php","");
+        window.location.href = url+"product.php?productId="+$(event.target).data("id");
+    } else{
+        window.location.href += "product.php?productId="+$(event.target).data("id");
     }
-    window.location.href = url+"product.php?productId="+$(event.target).data("id")
 }
