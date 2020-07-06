@@ -634,3 +634,11 @@ fieldset{
     
     opacity: .3;
 }
+
+.carousel-h {
+    height: calc(100vh-65px) !important;
+}
+
+.navbar {
+    height: 65px;
+}
