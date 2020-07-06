@@ -49,29 +49,32 @@ function eventListenerFunction() {
         USER ACTIONS:
     */
 
-        //changing color value of the product object:
-        product.color = modColor;
+    // User mouse over preview thumbnails to see it in the bigger view
+    document.getElementById("ml_preview").addEventListener("mouseover", function () {
+        if(event.target.classList.contains("ml_preview_image")) {
+            document.getElementById("ml_image1").src = event.target.src;
+        }
+    });
 
-        document.getElementById("ml_image1").src = product.color + "/image1.jpg"; //changing color of the large image through source
-        document.getElementById("main_title").innerHTML = product.name + " " + product.color.charAt(0).toUpperCase() + product.color.slice(1); //changing color text in product name
+    // User selects a product with a different color (click on image)
+    document.getElementById("mr_color").addEventListener("click", function () {
+        if (event.target.classList.contains("mr_color_image")){
+            changePreviewImages(event.target.dataset.color);
+            document.getElementById("main_title").innerHTML = product.name + " " + product.color[event.target.dataset.color];
+        }
+    });
 
-        //changing colors of the small preview images:
-        for (let i = 0; i < document.getElementsByClassName("ml_preview_image").length; i++)
-            document.getElementsByClassName("ml_preview_image")[i].src = product.color + "/image" + (i + 1) + ".jpg";
-    })
-    // selecting shoes sizes and by change method for diffrent sizes shoes
-    document.getElementById("size_selector").addEventListener("change", function (event) {
-        // changing the price value when user selecting diffrent sizes
-        product.size = event.target.options[event.target.selectedIndex].value;
-        product.price = 19.95 + ((product.size - 38) * 2);
-        document.getElementById("main_show_price").innerHTML = product.price + " €";
-        document.getElementById("f_price").innerHTML = product.price + " €";
-    })
+    // User changes shoes size (input select change)
+    document.getElementById("size_selector").addEventListener("change", function () {
+        // Updates price based on product size
+        let size = event.target.options[event.target.selectedIndex].value;
+        document.getElementById("main_show_price").innerHTML = product.size[size] + " €";
+    });
     
     document.getElementById("gift_checkbox").addEventListener("change", function () {
         if (this.checked) document.getElementById("gift_text").style.display = "block";
         else document.getElementById("gift_text").style.display = "none";
-    }) 
+    });
 
    document.getElementById('radio_parent').addEventListener("click", function (event) {
     if(event.target.name=="shipment") {
