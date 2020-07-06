@@ -13,10 +13,10 @@
 
 /*Styling the header with logo*/
 
-header, footer {
-height: 10vh;
-width: 100%;
-background-color: rgb(226, 226, 226);
+footer {
+    height: 10vh;
+    width: 100%;
+    background-color: rgb(226, 226, 226);
 }
 
 #box_1_main{
