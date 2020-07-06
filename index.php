@@ -31,23 +31,23 @@
                     <div id="carousel1" class="d-block carousel__img-container h-100"></div>
                     <div class="carousel-caption d-none d-md-block">
                         <h5>The best shoes</h5>
-                        <p>Here you found the best quality shoes brands.</p>
+                        <p>Here you have the best quality shoes brands.</p>
                     </div>
                 </div>
                 <div class="carousel-item overflow-hidden carousel-h">
                     <div id="carousel2" class="d-block carousel__img-container h-100"></div>
                     <!-- <img src="assets/img/carousel/2.jpg" class="d-block w-100" alt="..."> -->
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>Second slide label</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h5>Found what suits you</h5>
+                        <p>Find the right shoes for your use.</p>
                     </div>
                 </div>
                 <div class="carousel-item overflow-hidden carousel-h">
                     <div id="carousel3" class="d-block carousel__img-container h-100"></div>
                     <!-- <img src="assets/img/carousel/3.jpg" class="d-block w-100" alt="..."> -->
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>Third slide label</h5>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                        <h5>Extra fast shipping</h5>
+                        <p>You will receive your order within 24 hours!</p>
                     </div>
                 </div>
             </div>
