@@ -1,5 +1,5 @@
 <?php
-// session_start();
+session_start();
 // echo $_SESSION['user'];
 
 ?>
@@ -16,9 +16,14 @@
     </head>
     <body class="bg-light">
       <div id="inAdminPage" class="d-none"></div>
-      <header class="d-flex flex-row justify-content-between p-4 bg-white">
+      <header class="d-flex align-content-center flex-row justify-content-between p-4 bg-white">
         <p class="font-weight-bold">LOGO</p>
+        <div class="d-flex flex-row">
+        <?php
+        echo "<p class='pt-2 pr-2'>" . $_SESSION['user'] . "</p>";
+        ?>
         <a href="../Admin/admin-login.php"><button type="button" class="d-flex btn btn-light" id="signout-admin">Sign Out</button></a>
+        </div>
       </header>
       <div class="container d-flex flex-row mw-100" id="container">
         <!--Div Navbar Vertical-->

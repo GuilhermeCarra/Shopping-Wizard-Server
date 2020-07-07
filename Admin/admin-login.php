@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(isset($_SESSION['user'])){
-header("Location: admin-panel.php");
+// header("Location: admin-panel.php");
 }
 ?>
     <!DOCTYPE html>
