@@ -20,4 +20,4 @@ Once selected, purchase the product to go trhough the shipping wizard. You've go
 - Carlota Gallart: https://code.assemblerschool.com/carlota-gallart
 
 Thank you!
-###### Christian, Guilherme, Carota & Alejandro.
+###### Christian, Guilherme, Carlota & Alejandro.
