@@ -639,7 +639,7 @@ fieldset{
 
 .shoes{
     width: 100%;
-    height: 100vh;
+    height: calc(100vh - 65px);
     overflow: hidden;
     background: rgb(116, 187, 195);
     background-size: cover;
@@ -651,8 +651,13 @@ fieldset{
     width: 100vw;
 }
 
-.text-404{
+.title-404{
     font-size: 172px;
+    color: white;
+}
+
+.text-404{
+    font-size: 72px;
     color: white;
 }
 
