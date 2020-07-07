@@ -28,9 +28,9 @@
                 <li class="layer" data-depth="0.1"><img src="assets/img/404/1.png"></li>
                 <li class="layer" data-depth="0.2"><img src="assets/img/404/2.png"></li>
                 <li class="layer" data-depth="0.4"><img src="assets/img/404/3.png"></li>
-                <li class="layer w-100 h-100 d-flex flex-column justify-content-center align-items-center" style="border: 1px solid red;" data-depth="0">
-                    <span class="title-404" style="border: 1px solid red; line-height: 130px;" >404</span>
-                    <span class="text-404" style="border: 1px solid red;" >Oh no! Feeling like Cinderella? </span>
+                <li class="layer w-100 h-100 d-flex flex-column justify-content-center align-items-center" data-depth="0">
+                    <span class="title-404" >404</span>
+                    <span class="text-404" >Oh no! Feeling like Cinderella? </span>
                 </li>
                 <li class="layer" data-depth="0.6"><img src="assets/img/404/4.png"></li>
                 <li class="layer" data-depth="0.8"><img src="assets/img/404/5.png"></li>
