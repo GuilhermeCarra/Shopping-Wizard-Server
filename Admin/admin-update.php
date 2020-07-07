@@ -44,7 +44,7 @@
                   <th scope="row">00001</th>
                   <td>Anna Mark</td>
                   <td>anna@gmail.com</td>
-                  <td><button type="button" class="btn btn-dark" id="edit-user">Edit</button>
+                  <td><a href="../Admin/edit-user.php"><button type="button" class="btn btn-dark" id="edit-user">Edit</button></a>
                     <button type="button" class="btn btn-danger">X</button></td>
                 </tr>
               </tbody>

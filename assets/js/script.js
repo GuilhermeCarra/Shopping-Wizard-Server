@@ -214,9 +214,6 @@ function checkAnswers(answersArr) {
 //!script admin //
 
 // search admins
-$("#edit-user").click(function(){
-    alert("gola");
-})
 $("#search-user-table").on("keyup", function () {
     const value = $(this).val().toLowerCase();
     $("#user-table tr").filter(function () {
