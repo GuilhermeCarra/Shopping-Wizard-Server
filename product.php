@@ -16,7 +16,7 @@
     <title>Jordan shoes</title>
 </head>
 
-<body onload="">
+<body>
     <div id="box_0">
         <?php include('header.php') ?>
         <main class="d__flex" id="box_1_main">
@@ -64,22 +64,23 @@
                         <!--color-->
                         Color
                         <div id="mr_color" class="main_normal_text">
-                            <img class="mr_color_image" src="">
-                            <!--Img1-->
-                            <img class="mr_color_image" src="">
-                            <!--Img2-->
-                            <img class="mr_color_image" src="">
-                            <!--Img3-->
+                            <img class="mr_color_image" src="">     <!--Img1-->
+                            <img class="mr_color_image" src="">     <!--Img2-->
+                            <img class="mr_color_image" src="">     <!--Img3-->
                         </div>
                     </div>
                 </div>
                 <button class="black_button" onclick="buy()">BUY</button>
             </div>
         </main>
-        <footer>
-            <b>Shop 2020</b>
-        </footer>
+        <!-- Footer -->
+        <footer class="page-footer">
+            <div class="footer-copyright text-center py-4">© 2020 Copyright:
+            <a href="/index.php">Nice Shoes</a>
+            </div>
+        </footer> <!-- Footer -->
     </div>
+
     <div id="FormPage">
         <header style="position:relative">
             <div class="connector"></div>
@@ -113,29 +114,29 @@
                 <h2>Step 1 - Profile</h2>
                 <fieldset>
                     <label for="user">Username<span class="required_dot">*</span></label><br>
-                    <input type="text" class="step1_input" name="username" autocomplete="off" placeholder="beronidas">
+                    <input type="text" class="step1_input" name="username" autocomplete="off" placeholder="Username">
                 </fieldset><br>
 
                 <fieldset>
                     <label for="email">Email<span class="required_dot">*</span></label><br>
                     <input type="email" class="step1_input" name="email" autocomplete="off"
-                        placeholder="beron@gmail.com">
+                        placeholder="email@email.com">
                 </fieldset><br>
 
                 <fieldset>
                     <label for="password">Password<span class="required_dot">*</span></label><br>
                     <input type="password" class="step1_input" name="password" autocomplete="off"
-                        placeholder="abetoMayor3">
+                        placeholder="Abcde1!">
                 </fieldset><br>
 
                 <fieldset>
                     <label for="confrim password">Confirm Pasword<span class="required_dot">*</span></label><br>
                     <input type="password" class="step1_input" name="confrim password" autocomplete="off"
-                        placeholder="abetoMayor3">
-                </fieldset><br>
+                        placeholder="Abcde1!">
+                </fieldset>
             </form>
-
         </main>
+
         <main id="box_2">
             <form>
                 <h2>Step 2 - Address</h2>
@@ -195,7 +196,7 @@
                         <option data-countryCode="GRC" value="30">GRC</option>
                     </select>
                     <input type="tel" class="step2_input" autocomplete="off" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"
-                        placeholder="798 213 456" style="position:absolute;margin-left:-1px">
+                        placeholder="798 213 456">
                 </fieldset><br>
 
                 <input type="checkbox" class="radio" name="checkbox" autocomplete="off">
@@ -205,6 +206,7 @@
             </form>
 
         </main>
+
         <main id="box_3">
 
             <h2>Step 3 - Shipping</h2>
@@ -241,12 +243,12 @@
                         <label for="filename" style="cursor:pointer; text-align: center;">Select image <i class="far fa-file" style="font-size: 18px;"></i></label>
                 </div>
             </form>
-        </main> 
-        <br>
-        <footer class="reverse_row">
+        </main>
+
+        <footer class="reverse_row py-4">
             <div class="main_right reverse_row">
                 <button class="black_button">Next</button>
-                <button class="clear_button">Clear form</button>
+                <button class="clear_button mr-3">Clear form</button>
             </div>
         </footer>
         <div class="background_grey">
@@ -264,7 +266,6 @@
                                 <div class="main_normal_text finish_padding">Color: <div id="final_color"></div></div>
                                 <div class="main_normal_text finish_padding" id="estimate">ESTIMATE DELIVERY DATE:</div>
                                 <div class="main_normal_text finish_padding">Between <b id="f_date_1"></b> and <b id="f_date_2"></b> </div>
-                                
                             </div>
                         </div>
 
