@@ -15,9 +15,9 @@ To navigate throught the project, interact with it as a usual online store. Clic
 Once selected, purchase the product to go trhough the shipping wizard. You've got only 5 minutes to complete the purchase, otherwise, you'll be redirected to the homepage.
 
 #### Collaborators:
-Christian Callau: https://code.assemblerschool.com/christian-callau
-Guilherme Carra: https://code.assemblerschool.com/guillherme-carra
-Carlota Gallart: https://code.assemblerschool.com/carlota-gallart
+- Christian Callau: https://code.assemblerschool.com/christian-callau
+- Guilherme Carra: https://code.assemblerschool.com/guillherme-carra
+- Carlota Gallart: https://code.assemblerschool.com/carlota-gallart
 
 Thank you!
 ###### Christian, Guilherme, Carota & Alejandro.
