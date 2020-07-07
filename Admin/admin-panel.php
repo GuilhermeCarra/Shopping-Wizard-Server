@@ -1,9 +1,12 @@
 <?php
-include("admin-validate-user.php");
+// include("admin-validate-user.php");
 session_start();
-// echo $_SESSION['user'];
+
+echo "<p> Welcome " .  $_SESSION['user'] . "</p>";
 
 ?>
+
+
 
 <!DOCTYPE html>
     <html lang="en">
@@ -18,7 +21,7 @@ session_start();
       <div id="inAdminPage" class="d-none"></div>
       <header class="d-flex flex-row justify-content-between p-4 bg-white">
         <p class="font-weight-bold">LOGO</p>
-        <a href="../Admin/admin-login.php"><button type="button" class="d-flex btn btn-light" id="signout-admin">Sign Out</button></a>
+        <a href="../Admin/admin-signout.php"><button type="button" class="d-flex btn btn-light" id="signout-admin">Sign Out</button></a>
       </header>
       <div class="container d-flex flex-row mw-100" id="container">
         <!--Div Navbar Vertical-->

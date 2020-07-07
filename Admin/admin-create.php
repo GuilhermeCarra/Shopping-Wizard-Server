@@ -1,19 +1,9 @@
 <?php
 // session_start();
 // echo $_SESSION['user'];
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $userName = $_POST['name-user'];
-    $userEmail = $_POST['email-user'];
-    $userPassword = $_POST['password-user'];
-
-    if (empty($userName && $userEmail && $userPassword)) {
-        echo "<p>Field is empty <p>";
-    } else {
-        echo $userName . $userEmail .$userPassword;
-    }
-}
 ?>
+
 
 <!DOCTYPE html>
     <html lang="en">
@@ -51,14 +41,46 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <label for="name">Full name</label>
                 <input type="text" name="name-user" class="form-control border border-dark" id="user-name">
               </div>
+                <?php
+                if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+                  $userName = $_POST['name-user'];
+
+                  if (empty($userName)) {
+                      echo "<p>Field is empty <p>";
+                  } else {
+                  }
+                }
+                ?>
               <div class="form-group" id="email-manager-div">
-                <label for="name">Email</label>
+                <label for="email">Email</label>
                 <input type="email" name="email-user" class="form-control border border-dark" id="user-email">
               </div>
+              <?php
+                if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+                  $userEmail = $_POST['email-user'];
+
+                  if (empty($userEmail)) {
+                      echo "<p>Field is empty <p>";
+                  } else {
+                  }
+                }
+                ?>
               <div class="form-group" id="password-manager-div">
-                <label for="name">Password</label>
+                <label for="password">Password</label>
                 <input type="password" name="password-user" class="form-control border border-dark" id="user-password">
               </div>
+              <?php
+                if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                  $userPassword = $_POST['password-user'];
+
+                  if (empty($userPassword)) {
+                      echo "<p>Field is empty <p>";
+                  } else {
+                  }
+                }
+                ?>
                 <button type="submit" id="submit-n-user" class="btn btn-dark w-100 mt-3 mb-2">Create user</button>
             </div>
           </div>

@@ -27,6 +27,7 @@
         </div>
         <!--Div Form Add Product-->
         <div id="new-product" class="d-flex mx-auto w-50 p-3 mt-5 bg-white rounded">
+        
           <div class="w-75 p-3">
           <h4 class="font-weight-bold mt-3">New Product</h4> <br>
           <div class="form-group" id="new-product-div">
