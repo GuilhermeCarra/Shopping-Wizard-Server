@@ -144,7 +144,6 @@ footer .main_right{
 
 footer {
     text-align: center;
-    padding-top: 5vh;
 }
 
 footer[class="reverse_row"]{
@@ -685,4 +684,33 @@ fieldset{
 .carousel__img-container{
     background-size: cover;
     background-position: center;
+}
+
+/*-------------------changes of classes for size--------------------------------------*/
+
+
+/* ----------------------------------------- *
+----------- HOME-PAGE STYLE ---------------- *
+*/
+
+.card-img-top:hover {
+    border-radius: 10%;
+    transform: scale(1.1);
+    box-shadow: rgba(0, 0, 0, 0.267) -1px 1px 4px 0px;
+    transition: 200ms ease-in-out;
+}
+
+.card-img-top {
+    filter: brightness(95%);
+    cursor: pointer;
+}
+
+.carousel-caption h5 {
+    text-transform: uppercase;
+}
+
+.carousel-caption * {
+    text-shadow: rgba(0, 0, 0, 0.747) 1px 1px 4px;
+    color: #fff;
+    font-size: 1.4rem;
 }

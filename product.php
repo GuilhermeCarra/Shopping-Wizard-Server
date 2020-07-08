@@ -10,15 +10,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Jordan shoes</title>
 </head>
 
 <body onload="">
     <div id="box_0">
-        <header>
-            <div class="logo"><b>LOGO</b></div>
-        </header>
+        <?php include('header.php') ?>
         <main class="d__flex" id="box_1_main">
             <div class="main_left d__flex">
                 <div id="ml_preview">
