@@ -46,8 +46,14 @@ footer {
 }
 
 #FormPage header {
+    position: relative;
     height: 13%;
     background-color: rgb(116, 187, 195)
+}
+
+#FormPage ul {
+    position:absolute;
+    z-index: 1;
 }
 
 #box_1 {
@@ -143,8 +149,8 @@ footer {
     background-color: white;
     border: 2px solid #222;
     border-radius: 10px;
-    width: 140px;
-    height: 20px;
+    width: 160px;
+    height: 24px;
     outline:0px none;
 }
 
@@ -231,16 +237,17 @@ footer[class="reverse_row"]{
 /*PHASE 2 FORM CSS*/
 
 #time_alert {
+    display: none;
     position: fixed;
     right: 10vw;
     top: 22vh;
-    height: 7vh;
     width: 30vh;
     padding: 2vh;
-    background-color: none;
+    background-color: gainsboro;
     color: black;
     font-size: 15px;
-    border-radius: 2px;
+    border-radius: 8px;
+    border: 1px solid rgb(53, 52, 52);
 }
 
 /*--------------header whith radio divs and a connector------------------------*/
@@ -385,6 +392,24 @@ file{
     border-radius: 3px;
     width:268px;
     height:30px;
+}
+
+#filename {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.file_label {
+    cursor: pointer;
+    text-align: center;
+}
+
+.file_label i {
+    font-size: 18px;
 }
 
 /*------------------Error message for inputs-------------------*/
@@ -578,6 +603,7 @@ fieldset{
     .connector{
         top:75%;
     }
+    
 }
 @media screen and (max-width:750px){
     .connector{

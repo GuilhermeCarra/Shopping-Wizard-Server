@@ -82,10 +82,10 @@
     </div>
 
     <div id="FormPage">
-        <header style="position:relative">
+        <header>
             <div class="connector"></div>
 
-            <ul class="d__flex" style="position:absolute; z-index: 1;">
+            <ul class="d__flex">
                 <li class="flex_column" >
                     <div class="top_menu_text">Profile</div>
                     <div class="div_circle"></div>
@@ -235,8 +235,8 @@
                         <label for="message">Gift message</label><br>
                         <textarea name="" cols="30" rows="5"></textarea><br><br>
                         <label for="gift image">Gift wrapper image</label><br>
-                        <input type="file"id="filename"  name="filename" style="width: 0.1px; height: 0.1px; opacity: 0;overflow: hidden;position: absolute;z-index: -1;">
-                        <label for="filename" style="cursor:pointer; text-align: center;">Select image <i class="far fa-file" style="font-size: 18px;"></i></label>
+                        <input type="file" id="filename" name="filename">
+                        <label for="filename" class="file_label">Select image <i class="far fa-file"></i></label>
                 </div>
             </form>
         </main>
@@ -268,7 +268,7 @@
                     <div class="background_white main_right">
                         <h3 class="grey_line">Your order</h3>
                         <div class="main_normal_text">
-                            Sneackers: <b id="f_price">19.95€</b>
+                            Product: <b id="f_price">19.95€</b>
                         </div>
                         <div class="main_normal_text">
                             Shipping Cost: <b id = "f_shipping"></b>
