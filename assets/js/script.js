@@ -147,12 +147,17 @@ function buy(){
     nextStep();
     function nextStep() {
         if (page > 0) {
+            if (page == 3) {
+                document.querySelector(".background_grey").style.display = "block"
+            }
             if(page == 4){
                 clearInterval(warningInterval);
                 clearInterval(timerInterval);
                 document.getElementById("f_required_buynow").style.display = "none";
                 document.getElementById("f_required_checkbox").style.display = "none";
                 document.getElementById("f_conditions").innerHTML = "You purchase took " + timerMin + " minutes and "+timerSec+" seconds";
+                document.getElementById("f_conditions").classList.add("f_time");
+                document.getElementById("f_conditions").classList.remove("fix");
                 document.getElementById("y_purchase").innerHTML = "Your order is complete! Thank You!";
                 return;
             } else if(page == 3) document.getElementsByTagName("footer")[1].style.display = "none";
@@ -173,7 +178,7 @@ function buy(){
         page++;
 
         document.getElementById("box_" + (page - 1)).style.display = "none";
-        document.getElementById("box_" + page).style.display = "block"; 
+        document.getElementById("box_" + page).style.display = "block";
     }
 }
 

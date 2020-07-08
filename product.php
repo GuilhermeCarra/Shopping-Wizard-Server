@@ -234,10 +234,6 @@
                 <div id="gift_text">
                         <label for="message">Gift message</label><br>
                         <textarea name="" cols="30" rows="5"></textarea><br><br>
-                    <!-- <div class="fileinputs"><input type="file" class="file" />
-
-                        <div class="fakefile"><input />
-                     </div> -->
                         <label for="gift image">Gift wrapper image</label><br>
                         <input type="file"id="filename"  name="filename" style="width: 0.1px; height: 0.1px; opacity: 0;overflow: hidden;position: absolute;z-index: -1;">
                         <label for="filename" style="cursor:pointer; text-align: center;">Select image <i class="far fa-file" style="font-size: 18px;"></i></label>
@@ -252,27 +248,22 @@
             </div>
         </footer>
         <div class="background_grey">
-        <main>
-            <div id="box_4" style="margin: 0;">
-            <h2>Step 4 - Finish</h2>
+            <div id="box_4">
+                <h2>Step 4 - Finish</h2>
                 <form action="" class="d__flex">
-                    <div class="background_white main_left">
-                        <h2 id="y_purchase">Your purchase</h2>
+                    <div class="background_white main_left_final">
+                        <h3 id="y_purchase">Your purchase</h3>
                         <div class="d__flex">
                             <img class="mr_color_image" src="" alt="" id="finish_image">
                             <div class="final_info">
                                 <h4 id="final_product_name">Black Air Jordan 1 Mid </h4>
                                 <div class="main_normal_text finish_padding">Size:  <b id="final_size">M</b></div>
                                 <div class="main_normal_text finish_padding">Color: <div id="final_color"></div></div>
-                                <div class="main_normal_text finish_padding" id="estimate">ESTIMATE DELIVERY DATE:</div>
-                                <div class="main_normal_text finish_padding">Between <b id="f_date_1"></b> and <b id="f_date_2"></b> </div>
+                                <div class="main_normal_text" id="estimate">ESTIMATE DELIVERY DATE:</div>
+                                <div class="main_normal_text">Between <b id="f_date_1"></b> and <b id="f_date_2"></b> </div>
                             </div>
                         </div>
 
-                        <!-- for checkbox input should go before label -->
-                        <input type="checkbox" id="f_required_checkbox" name="terms" class="radio" id="terms">
-                        <label for="terms" class="fix" id="f_conditions">I have read and accept the terms and conditions.</label><br>
-                        <button class="black_button" id="f_required_buynow">Buy now</button>
                     </div>
                     <div class="background_white main_right">
                         <h3 class="grey_line">Your order</h3>
@@ -287,11 +278,13 @@
                             Total: <b id="f_total"></b>
                         </div>
                     </div>
-
                 </form>
+                <!-- for checkbox input should go before label -->
+                <input type="checkbox" id="f_required_checkbox" name="terms" class="radio" id="terms">
+                <label for="terms" class="fix" id="f_conditions">I have read and accept the terms and conditions.</label><br>
+                <button class="black_button" id="f_required_buynow">Buy now</button>
             </div>
 
-        </main>
         </div>
 
     </div>

@@ -47,19 +47,28 @@ footer {
 
 #FormPage header {
     height: 13%;
+    background-color: rgb(116, 187, 195)
 }
 
-#box_1, #box_2, #box_3 {
+#box_1 {
     height: 75%;
-    overflow: auto;
 }
 
 #box_1_main {
     overflow: auto;
 }
 
+#box_3 {
+    min-height: 75%;
+}
+
+#box_4 {
+    min-height: 77%;
+}
+
 .reverse_row {
     height: 12%;
+    background-color: rgb(116, 187, 195);
 }
 
 /*Applying flex layout*/
@@ -100,6 +109,20 @@ footer {
 .main_left{
     width:40vw;
     padding:5vw;
+}
+
+.main_left_final {
+    width: 50vw;
+    padding: 0 3vw;
+    border: rgb(178, 178, 178) solid 1px;
+}
+
+#box_4 h2, #box_4 .black_button {
+    margin-left: 8.5%;
+}
+
+#f_required_checkbox  {
+    margin: 2% 0 2% 8.5%;
 }
 
 .main_right{
@@ -279,7 +302,6 @@ h2 {
 #FormPage label{
     display: inline-block;
     margin-bottom: 1vh;
-    margin-right: -120px;
 }
 
 #FormPage input, #FormPage select{
@@ -395,7 +417,9 @@ fieldset{
 }
 
 .background_grey{
+    display: none;
     background-color: rgb(226, 226, 226);
+    min-height: 87%;
 }
 
 .required_dot{
@@ -418,35 +442,29 @@ fieldset{
 }
 
 #finish_image {
-    width: 50%;
+    width: 30%;
     height: 30%;
     padding-bottom: 5%;
 }
 
 #box_4>.d__flex{
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 #box_4 .main_left{
     border: rgb(178, 178, 178) solid 1px;
     border-radius: 3px;
-    width:45vw;
+    width:55vw;
     padding:40px;
     padding-bottom:10px;
     margin-bottom:50px;
 }
 
-#box_4 h2:first-of-type{
-    margin-bottom:50px;
-}
-
 #box_4 .main_right{
-    height:170px;
+    height:180px;
     padding:20px;
     padding-top:10px;
     width:25vw;
-    margin-right: 7vw;
-    margin-bottom: 50px;
     border: rgb(178, 178, 178) solid 1px;
     border-radius: 3px;
 }
@@ -456,15 +474,32 @@ fieldset{
 }
 
 .grey_line {
+    margin: 2% 0;
     border-bottom: 1px solid #cccccc;
-}
-
-#final_product_name {
-    padding: 2vh 0;
 }
 
 .finish_padding {
     padding: 2vh 0;
+}
+
+#f_shipping, #f_total, #f_price {
+    font-weight: bold;
+}
+
+#y_purchase {
+    padding: 4% 0;
+}
+
+#f_conditions {
+    font-size: 1.1em;
+}
+
+.f_time {
+    margin-left: 8.5%;
+    margin-top: 10px;
+    background-color: white;
+    padding: 5px 12px;
+    border-radius: 6px;
 }
 
 /*-------------------margin between boxes footer and header---------------------------*/
@@ -575,7 +610,7 @@ fieldset{
         flex-wrap:wrap;
     }
     #finish_image{
-        width:100%;
+        width:30%;
     }
     #box_4 .main_left{
         padding:10px;
