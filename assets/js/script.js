@@ -138,7 +138,7 @@ function buy(){
         reviewTime.innerText = "You started registration " + (5 - timeLeft) + " minutes ago. You have " + timeLeft + " minutes left.";
         reviewTime.style.display = "block";
         setTimeout(() => reviewTime.style.display = "none", 6000);
-    }, 2000);
+    }, 60000);
 
     timerInterval = setInterval (() => {
         timerSec++;
