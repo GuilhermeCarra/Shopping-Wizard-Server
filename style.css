@@ -331,9 +331,9 @@ h2 {
 }
 
 .fix{
- position: inline-block; 
- left: 20px;
- width:80%;
+    position: inline-block;
+    left: 20px;
+    width:80%;
 }
 
 
@@ -362,7 +362,7 @@ h2 {
 
 .background_white{
     background-color: white;
-} 
+}
 
 #FormPage select[name="Phone"]{
     width:80px;
@@ -370,11 +370,11 @@ h2 {
 }
 
 #FormPage input[type="tel"]{
-    width:180px;    
+    width:180px;
 }
 #FormPage .country_names{
-     width:278px;
-     height: 40px;
+    width:278px;
+    height: 40px;
 }
 
 
@@ -412,7 +412,7 @@ file{
 }
 
 fieldset{
-    border:none;    
+    border:none;
     margin-bottom: 2vh;
 }
 
@@ -525,12 +525,8 @@ fieldset{
 }
 
 @media only screen and (max-width:1450px){
-    
     .connector{
         top:50%;
-    }
-    #FormPage header{
-       
     }
     .div_circle{
         height:30px;
@@ -539,10 +535,6 @@ fieldset{
 }
 
 @media screen and (max-width:1024px){
-    .div_circle{
-        width:2vw;
-        height:2vw;
-    }
     .main_left{
         width:90vw;
     }
@@ -551,7 +543,7 @@ fieldset{
     }
     .d__flex{
         flex-wrap:wrap;
-    }   
+    }
     .main_left .d__flex{
         flex-wrap:nowrap;
     }
@@ -566,16 +558,17 @@ fieldset{
         width:40vw;
         padding:10px;
     }
-    #FormPage header{
-        height:110px;
-    }
 }
 @media only screen and (max-width:900px){
+    .div_circle{
+        width:2vw;
+        height:2vw;
+    }
     .connector{
         top:75%;
     }
     #FormPage header{
-      height: 7%;
+        height: 7%;
     }
     #box_1 {
         height: 81%;
@@ -629,7 +622,6 @@ fieldset{
     }
     .black_button{
         width:30%;
-      
     }
     #FormPage input{
         width:130px;
@@ -666,7 +658,6 @@ fieldset{
     }
 }
 ::placeholder{
-    
     opacity: .3;
 }
 
