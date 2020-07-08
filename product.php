@@ -126,13 +126,13 @@
                 <fieldset>
                     <label for="password">Password<span class="required_dot">*</span></label><br>
                     <input type="password" class="step1_input" name="password" autocomplete="off"
-                        placeholder="Abcde1!">
+                        placeholder="Abcdef1!">
                 </fieldset><br>
 
                 <fieldset>
                     <label for="confrim password">Confirm Pasword<span class="required_dot">*</span></label><br>
                     <input type="password" class="step1_input" name="confrim password" autocomplete="off"
-                        placeholder="Abcde1!">
+                        placeholder="Abcdef1!">
                 </fieldset>
             </form>
         </main>
