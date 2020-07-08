@@ -10,13 +10,7 @@
 </head>
 
 <body>
-    <!-- HEADER -->
-    <nav class="navbar navbar-light bg-light sticky-top">
-        <a class="navbar-brand" href="#">
-            <img src="assets/img/icons/logo.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
-            Nice Shoes
-        </a>
-    </nav>
+    <?php include("header.php") ?>
 
     <!-- CAROUSEL -->
     <section>
@@ -31,7 +25,7 @@
                     <div id="carousel1" class="d-block carousel__img-container h-100"></div>
                     <div class="carousel-caption d-none d-md-block">
                         <h5>The best shoes</h5>
-                        <p>Here you have the best quality shoes brands.</p>
+                        <p>Here you found the best quality shoes brands.</p>
                     </div>
                 </div>
                 <div class="carousel-item overflow-hidden carousel-h">

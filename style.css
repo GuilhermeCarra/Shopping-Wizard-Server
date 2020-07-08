@@ -8,24 +8,73 @@
     font-family: 'Ubuntu', sans-serif;
     color: #222;
     outline:0px none;
+    box-sizing: border-box;
 }
 
 
-/*Styling the header with logo*/
+/* Product details step container styles */
 
-header, footer {
-height: 10vh;
-width: 100%;
-background-color: rgb(226, 226, 226);
+#box_0 {
+    height: 100vh;
+}
+
+.navbar {
+    height: 9% !important;
+}
+
+footer {
+    height: 9%;
+    background-color: rgb(226, 226, 226);
+}
+
+.footer-copyright {
+    height: 100%;
 }
 
 #box_1_main{
     margin: 0 8%;
-    width:92%;
+    height: 82%;
 }
 
 .logo {
     padding: 2vw 5vw;
+}
+
+/* Step 1 container styles */
+#FormPage {
+    height: 100vh;
+}
+
+#FormPage header {
+    position: relative;
+    height: 13%;
+    background-color: rgb(116, 187, 195)
+}
+
+#FormPage ul {
+    position:absolute;
+    z-index: 1;
+}
+
+#box_1 {
+    height: 75%;
+}
+
+#box_1_main {
+    overflow: auto;
+}
+
+#box_3 {
+    min-height: 75%;
+}
+
+#box_4 {
+    min-height: 77%;
+}
+
+.reverse_row {
+    height: 12%;
+    background-color: rgb(116, 187, 195);
 }
 
 /*Applying flex layout*/
@@ -54,7 +103,6 @@ background-color: rgb(226, 226, 226);
 
 #ml_image{
     width:90%;
-    
 }
 
 .ml_big_image{
@@ -67,6 +115,20 @@ background-color: rgb(226, 226, 226);
 .main_left{
     width:40vw;
     padding:5vw;
+}
+
+.main_left_final {
+    width: 50vw;
+    padding: 0 3vw;
+    border: rgb(178, 178, 178) solid 1px;
+}
+
+#box_4 h2, #box_4 .black_button {
+    margin-left: 8.5%;
+}
+
+#f_required_checkbox  {
+    margin: 2% 0 2% 8.5%;
 }
 
 .main_right{
@@ -87,8 +149,8 @@ background-color: rgb(226, 226, 226);
     background-color: white;
     border: 2px solid #222;
     border-radius: 10px;
-    width: 140px;
-    height: 20px;
+    width: 160px;
+    height: 24px;
     outline:0px none;
 }
 
@@ -104,7 +166,6 @@ background-color: rgb(226, 226, 226);
     border: transparent solid 2px;
     border-radius: 5px;
     padding: 0.3vw;
-    margin:2vw 0;
     margin-right: 4vw;
     width: 20%;
     cursor: pointer;
@@ -125,7 +186,6 @@ background-color: rgb(226, 226, 226);
     font-size: 18px;
     border: 2px solid #222;
     border-radius: 5px;
-    margin:2vw;
     width: 30%;
     cursor: pointer;  
     outline:0px none;
@@ -137,7 +197,6 @@ background-color: rgb(226, 226, 226);
 footer .main_right{
     margin:0;
     padding:0;
-    margin-top:-0.5vw;
 }
 
 /*Style for the footer*/
@@ -178,16 +237,17 @@ footer[class="reverse_row"]{
 /*PHASE 2 FORM CSS*/
 
 #time_alert {
+    display: none;
     position: fixed;
     right: 10vw;
     top: 22vh;
-    height: 7vh;
     width: 30vh;
     padding: 2vh;
-    background-color: none;
+    background-color: gainsboro;
     color: black;
     font-size: 15px;
-    border-radius: 2px;
+    border-radius: 8px;
+    border: 1px solid rgb(53, 52, 52);
 }
 
 /*--------------header whith radio divs and a connector------------------------*/
@@ -200,7 +260,7 @@ ul{
 }
 
 li{
-    padding-top:2%;
+    padding-top:1.2%;
     height:100%;
     width:25%;
     text-align: center;
@@ -209,21 +269,21 @@ li{
 }
 
 .div_circle{
-    width:2vw;
-    height:2vw;
+    width:4vw;
+    height:4vw;
     border: #333 solid 2px;
     border-radius: 50%;
     background-color:white;
-    margin: 5px auto;
+    margin: 0 auto;
 }
 
 .connector{
-    background-color: #bbb; 
-    width:76%; 
-    height:9%; 
-    position:absolute; 
-    left:12%; 
-    top:45%; 
+    background-color: #bbb;
+    width:75%;
+    height:9%;
+    position:absolute;
+    left:12%;
+    top:45%;
     z-index: 0;
 }
 
@@ -249,7 +309,6 @@ h2 {
 #FormPage label{
     display: inline-block;
     margin-bottom: 1vh;
-    margin-right: -120px;
 }
 
 #FormPage input, #FormPage select{
@@ -279,9 +338,9 @@ h2 {
 }
 
 .fix{
- position: inline-block; 
- left: 20px;
- width:80%;
+    position: inline-block;
+    left: 20px;
+    width:80%;
 }
 
 
@@ -310,7 +369,7 @@ h2 {
 
 .background_white{
     background-color: white;
-} 
+}
 
 #FormPage select[name="Phone"]{
     width:80px;
@@ -318,37 +377,12 @@ h2 {
 }
 
 #FormPage input[type="tel"]{
-    width:180px;    
+    width:180px;
 }
 #FormPage .country_names{
-     width:278px;
-     height: 40px;
+    width:278px;
+    height: 40px;
 }
-
-
-/* div.fileinputs {
-    position: relative;
-
-}
-
-div.fakefile {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    z-index: 1;
-}
-input.file {
-    position: relative;
-    text-align: right;
-    -moz-opacity: 0;
-    filter: alpha(opacity: 0);
-    opacity: 0;
-    z-index: 2;
-}
-.img_file{
-    position: relative;
-
-} */
 
 
 /*-------------------------file input--------------------------*/
@@ -358,6 +392,24 @@ file{
     border-radius: 3px;
     width:268px;
     height:30px;
+}
+
+#filename {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.file_label {
+    cursor: pointer;
+    text-align: center;
+}
+
+.file_label i {
+    font-size: 18px;
 }
 
 /*------------------Error message for inputs-------------------*/
@@ -385,12 +437,14 @@ file{
 }
 
 fieldset{
-    border:none;    
+    border:none;
     margin-bottom: 2vh;
 }
 
 .background_grey{
+    display: none;
     background-color: rgb(226, 226, 226);
+    min-height: 87%;
 }
 
 .required_dot{
@@ -413,35 +467,29 @@ fieldset{
 }
 
 #finish_image {
-    width: 50%;
+    width: 30%;
     height: 30%;
     padding-bottom: 5%;
 }
 
 #box_4>.d__flex{
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 #box_4 .main_left{
     border: rgb(178, 178, 178) solid 1px;
     border-radius: 3px;
-    width:45vw;
+    width:55vw;
     padding:40px;
     padding-bottom:10px;
     margin-bottom:50px;
 }
 
-#box_4 h2:first-of-type{
-    margin-bottom:50px;
-}
-
 #box_4 .main_right{
-    height:170px;
+    height:180px;
     padding:20px;
     padding-top:10px;
     width:25vw;
-    margin-right: 7vw;
-    margin-bottom: 50px;
     border: rgb(178, 178, 178) solid 1px;
     border-radius: 3px;
 }
@@ -451,22 +499,36 @@ fieldset{
 }
 
 .grey_line {
+    margin: 2% 0;
     border-bottom: 1px solid #cccccc;
-}
-
-#final_product_name {
-    padding: 2vh 0;
 }
 
 .finish_padding {
     padding: 2vh 0;
 }
 
+#f_shipping, #f_total, #f_price {
+    font-weight: bold;
+}
+
+#y_purchase {
+    padding: 4% 0;
+}
+
+#f_conditions {
+    font-size: 1.1em;
+}
+
+.f_time {
+    margin-left: 8.5%;
+    margin-top: 10px;
+    background-color: white;
+    padding: 5px 12px;
+    border-radius: 6px;
+}
+
 /*-------------------margin between boxes footer and header---------------------------*/
 
-#box_1,#box_2,#box_3,#box_4{
-    margin:60px 0;
-}
 
 /*-------------------changes of classes for size--------------------------------------*/
 
@@ -475,8 +537,8 @@ fieldset{
     .connector{
         top:62%;
     }
-    #FormPage header{
-        height:115px;
+    li{
+        padding-top: 2.4%;
     }
     .div_circle{
         height:30px;
@@ -488,12 +550,8 @@ fieldset{
 }
 
 @media only screen and (max-width:1450px){
-    
     .connector{
         top:50%;
-    }
-    #FormPage header{
-        height:115px;
     }
     .div_circle{
         height:30px;
@@ -502,10 +560,6 @@ fieldset{
 }
 
 @media screen and (max-width:1024px){
-    .div_circle{
-        width:2vw;
-        height:2vw;
-    }
     .main_left{
         width:90vw;
     }
@@ -514,7 +568,7 @@ fieldset{
     }
     .d__flex{
         flex-wrap:wrap;
-    }   
+    }
     .main_left .d__flex{
         flex-wrap:nowrap;
     }
@@ -529,22 +583,27 @@ fieldset{
         width:40vw;
         padding:10px;
     }
-    #FormPage header{
-        height:110px;
-    }
 }
 @media only screen and (max-width:900px){
+    .div_circle{
+        width:2vw;
+        height:2vw;
+    }
     .connector{
         top:75%;
     }
     #FormPage header{
-        height:60px;
+        height: 7%;
+    }
+    #box_1 {
+        height: 81%;
     }
 }
 @media only screen and (max-width:800px){
     .connector{
         top:75%;
     }
+    
 }
 @media screen and (max-width:750px){
     .connector{
@@ -565,24 +624,20 @@ fieldset{
     }
     li{
         padding-top:0.5%;
-        font-size: 70%;
     }
     #box_4 .d__flex{
         flex-wrap:wrap;
     }
     #finish_image{
-        width:100%;
+        width:30%;
     }
     #box_4 .main_left{
         padding:10px;
     }
     .connector{
-        top:45%;
+        top:48%;
     }
-    #FormPage header{
-        height:50px;
-    }
-}  
+}
 
 @media screen and (max-width:400px){
     #box_1,#box_2,#box_3,#box_4{
@@ -593,7 +648,6 @@ fieldset{
     }
     .black_button{
         width:30%;
-      
     }
     #FormPage input{
         width:130px;
@@ -630,7 +684,6 @@ fieldset{
     }
 }
 ::placeholder{
-    
     opacity: .3;
 }
 
