@@ -109,44 +109,44 @@
         </header>
         <div id="time_alert"></div>
         <main id="box_1">
-            <form>
+            <form id="form-profile">
                 <h2>Step 1 - Profile</h2>
                 <fieldset>
                     <label for="user">Username<span class="required_dot">*</span></label><br>
-                    <input type="text" class="step1_input" name="username" autocomplete="off" placeholder="beronidas">
+                    <input type="text" class="step1_input" name="username" autocomplete="off" value="beronidas">
                 </fieldset><br>
 
                 <fieldset>
                     <label for="email">Email<span class="required_dot">*</span></label><br>
                     <input type="email" class="step1_input" name="email" autocomplete="off"
-                        placeholder="beron@gmail.com">
+                        value="beron@gmail.com">
                 </fieldset><br>
 
                 <fieldset>
                     <label for="password">Password<span class="required_dot">*</span></label><br>
                     <input type="password" class="step1_input" name="password" autocomplete="off"
-                        placeholder="abetoMayor3">
+                        value="abetoMayor3">
                 </fieldset><br>
 
                 <fieldset>
-                    <label for="confrim password">Confirm Pasword<span class="required_dot">*</span></label><br>
-                    <input type="password" class="step1_input" name="confrim password" autocomplete="off"
-                        placeholder="abetoMayor3">
+                    <label for="confirm password">Confirm Pasword<span class="required_dot">*</span></label><br>
+                    <input type="password" class="step1_input" name="password2" autocomplete="off"
+                        value="abetoMayor3">
                 </fieldset><br>
             </form>
 
         </main>
         <main id="box_2">
-            <form>
+            <form id="form-address">
                 <h2>Step 2 - Address</h2>
                 <fieldset>
                     <label for="firstname">First name<span class="required_dot">*</span></label><br>
-                    <input type="text" class="step2_input" name="firstname" autocomplete="off" placeholder="Beron"><br>
+                    <input type="text" class="step2_input" name="firstname" autocomplete="off" value="Beron"><br>
                 </fieldset>
 
                 <fieldset>
                     <label for="last name">Last name<span class="required_dot">*</span></label><br>
-                    <input type="text" class="step2_input" name="Last name" autocomplete="off" placeholder="Gamboa">
+                    <input type="text" class="step2_input" name="lastname" autocomplete="off" value="Gamboa">
                 </fieldset><br>
 
                 <fieldset>
@@ -155,19 +155,19 @@
                 </fieldset><br>
 
                 <fieldset>
-                    <label for="Adress1">Adress 1<span class="required_dot">*</span></label><br>
-                    <input type="text" class="step2_input" name="Address" autocomplete="off" placeholder="Industria 22 p1 2">
+                    <label for="Address1">Address 1<span class="required_dot">*</span></label><br>
+                    <input type="text" class="step2_input" name="address" autocomplete="off" value="Industria 22 p1 2">
                 </fieldset><br>
 
                 <fieldset>
-                    <label for="Adress2">Adress 2</label><br>
-                    <input type="text" name="Address2" autocomplete="off" placeholder="Comte d'urgell 45 p3 3">
+                    <label for="Address2">Address 2</label><br>
+                    <input type="text" name="address2" autocomplete="off" value="Comte d'urgell 45 p3 3">
                 </fieldset><br>
 
                 <fieldset>
                     <Label for="postal">Postal code<span class="required_dot">*</span></label><br>
-                    <input type="text" class="step2_input" name="postal" autocomplete="off" pattern="[0-9]{5}" title="Five digit zip code"
-                        placeholder="07053" />
+                    <input type="text" class="step2_input" name="postal" autocomplete="off" title="Five digit zip code"
+                        value="07053" />
                 </fieldset><br>
 
                 <fieldset>
@@ -194,8 +194,7 @@
 
                         <option data-countryCode="GRC" value="30">GRC</option>
                     </select>
-                    <input type="tel" class="step2_input" autocomplete="off" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"
-                        placeholder="798 213 456" style="position:absolute;margin-left:-1px">
+                    <input type="tel" class="step2_input" autocomplete="off" name="phone" value="798213456" style="position:absolute;margin-left:-1px">
                 </fieldset><br>
 
                 <input type="checkbox" class="radio" name="checkbox" autocomplete="off">

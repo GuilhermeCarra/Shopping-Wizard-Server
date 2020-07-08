@@ -145,7 +145,7 @@ function buy(){
     document.getElementById("final_color").style.backgroundColor = product.color;
 
     nextStep();
-    function nextStep() {
+    async function nextStep() {
         if (page > 0) {
             if(page == 4){
                 clearInterval(warningInterval);
@@ -158,22 +158,16 @@ function buy(){
             } else if(page == 3) document.getElementsByTagName("footer")[1].style.display = "none";
 
             let inputArr = document.getElementsByClassName("step" + page + "_input");
-            let checked_answers = checkAnswers(inputArr);
-
-            if (checked_answers.includes(false)) {
-                for (let i in checked_answers)
-                    !checked_answers[i] ? inputArr[i].parentElement.classList.add("input_error") : inputArr[i].parentElement.classList.remove("input_error");
-                return;
-            }
+            await checkAnswers(inputArr, page);
         }
-
+        
         clearInterval(warningInterval);
         timeLeft = 5;
         divCircles[page].style.backgroundColor = "#888";
         page++;
 
         document.getElementById("box_" + (page - 1)).style.display = "none";
-        document.getElementById("box_" + page).style.display = "block"; 
+        document.getElementById("box_" + page).style.display = "block";
     }
 }
 
@@ -201,34 +195,28 @@ function resetBuy() {
     document.getElementById("FormPage").style.display = "none";
 }
 
-function checkAnswers(answersArr) {
-    let results = [];
+async function checkAnswers(inputArr, page) {
+    console.log(page)
+    const formId = {
+        1: '#form-profile',
+        2: '#form-address'
+    }[page];
 
-    for (let i = 0; i < answersArr.length; i++) {
-        let ratOfLaboratory = answersArr[i].value;
-        let req;
+    await $.ajax({
+        type: 'POST',
+        url: 'validate.php',
+        data: $(formId).serialize(),
+        success: (response) => {
+            console.log(response)
+            checked_answers = JSON.parse(response);
 
-        if (page == 1) {
-            switch (i) {
-                case 0: req = /^[a-zA-Z0-9]{5,20}$/; break; //Username
-                case 1: req = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; break; //Email
-                case 2: req = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,20}$/; break; //Password
-                case 3: req = new RegExp(answersArr[i-1].value); break; //Same Password
-            }
-        } else if (page == 2){
-            switch (i) {
-                case 0: req = /^[a-zA-Z]{1,20}$/; break; //First Name
-                case 1: req = /^[a-zA-Z]{1,20}$/; break; //Last Name
-                case 2: req = /^\s*\S+(?:\s+\S+){1,50}/; break; //Adress1
-                case 3: req = /^[0-9]{5}$/; break; //Postal Code
-                case 4: req = /^[0-9]{9}$/; break; //Phone
+            if (checked_answers.includes(false)) {
+                for (let i in checked_answers)
+                    !checked_answers[i] ? inputArr[i].parentElement.classList.add("input_error") : inputArr[i].parentElement.classList.remove("input_error");
+                return;
             }
         }
-
-        req.test(ratOfLaboratory) ? results.push(true) : results.push(false);
-    }
-
-    return results;
+    })
 }
 
 // NEW FUNCTIONS
