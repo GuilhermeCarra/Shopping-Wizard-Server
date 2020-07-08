@@ -28,9 +28,9 @@
                 <li class="layer" data-depth="0.1"><img src="assets/img/404/1.png"></li>
                 <li class="layer" data-depth="0.2"><img src="assets/img/404/2.png"></li>
                 <li class="layer" data-depth="0.4"><img src="assets/img/404/3.png"></li>
-                <li class="layer w-100 h-100 d-flex flex-column justify-content-center align-items-center" style="border: 1px solid red;" data-depth="0">
-                    <span class="title-404" style="border: 1px solid red; line-height: 130px;" >404</span>
-                    <span class="text-404" style="border: 1px solid red;" >Oh no! Feeling like Cinderella? </span>
+                <li class="layer w-100 h-100 d-flex flex-column justify-content-center align-items-center" data-depth="0">
+                    <span class="title-404" >404</span>
+                    <span class="text-404" >Oh no! Feeling like Cinderella? </span>
                 </li>
                 <li class="layer" data-depth="0.6"><img src="assets/img/404/4.png"></li>
                 <li class="layer" data-depth="0.8"><img src="assets/img/404/5.png"></li>
@@ -42,9 +42,6 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
-        <script>
-            var scene = document.getElementById('scene');
-            var parallaxInstance = new Parallax(scene);
-        </script>
+        <script src="assets/js/notfound.js"></script>
     </body>
 </html>

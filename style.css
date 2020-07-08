@@ -698,15 +698,30 @@ fieldset{
     background-attachment: fixed;
 }
 
+.layer{
+    width: 100vw;
+    height: 100vh;
+}
+
 .layer img{
     overflow: hidden;
-    height: 100vh;
+    /* height: 100vh; */
+    object-fit: cover;
     transform: translateY(-65px);
+}
+
+.tall{
+    height: 100vh;
+}
+
+.wide{
+    width: 100vw;
 }
 
 .title-404{
     font-size: 172px;
     color: white;
+    line-height: 130px;
 }
 
 .text-404{
