@@ -16,7 +16,9 @@ if(isset($_SESSION['user'])){
     <body class="bg-light">
       <div id="inAdminPage" class="d-none"></div>
       <header class="d-flex flex-row justify-content-between p-4 bg-white">
-        <p class="font-weight-bold"><img src="../assets/img/icons/logo.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">Nice Shoes</p>
+        <a href="../index.php">
+          <p class="font-weight-bold"><img src="../assets/img/icons/logo.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">Nice Shoes</p>
+        </a>
         <button type="button" class="btn btn-light" id="login-admin">Log in</button>
         <button type="button" class="d-none btn btn-light" id="signout-admin">Sign Out</button>
       </header>
