@@ -3,9 +3,18 @@ session_start();
 // echo $_SESSION['user'];
 $adminJson = file_get_contents('../json/admins.json');
 $admins = json_decode($adminJson, true);
-var_dump($admins);
+$admin = $admins[$_GET['id']];
+
+if(isset($_POST['btn-edit-user'])){
+  $admins[$_GET['id']]["username"] = $_POST["edit-username"];
+  $admins[$_GET['id']]["email"] = $_POST["edit-email"];
+  $admins[$_GET['id']]["password"] = $_POST["edit-password"];
+  $adminsUpdated = json_encode($admins);
+  $adminsFinalJSON = file_put_contents('../json/admins.json', $adminsUpdated);
+}
 
 
+// var_dump($admins[$_GET['id']]);
 
 
 ?>
@@ -45,21 +54,21 @@ var_dump($admins);
         </div>
             <div id="edit-manager" class="d-flex mx-auto w-50 h-25 p-3 mt-5 bg-white rounded">
         <div class=" w-75 p-3">
-        <form action="">
+        <form method="post" action="edit-user.php?id=<?php echo $_GET['id'] ?>">
             <h4 class="font-weight-bold mt-3">Edit manager</h4> <br>
             <div class="form-group" id="edit-manager-div">
             <label for="name">Username</label>
-            <input type="text" value="" class="form-control border border-dark" id="user-name-u">
+            <input type="text" name="edit-username" value="<?php echo $admin['username']?>" class="form-control border border-dark" id="user-name-u">
             </div>
             <div class="form-group" id="email-manager-u-div">
             <label for="name">Email</label>
-            <input type="email" class="form-control border border-dark" id="user-email-u">
+            <input type="email" name="edit-email" value="<?php echo $admin['email']?>" class="form-control border border-dark" id="user-email-u">
             </div>
             <div class="form-group" id="password-manager-u-div">
             <label for="name">Password</label>
-            <input type="password" class="form-control border border-dark" id="user-password-u">
+            <input type="password" name="edit-password" value="<?php echo $admin['password']?>" class="form-control border border-dark" id="user-password-u">
             </div>
-            <button type="submit" id="submit-upd-user" class="btn btn-dark w-100 mt-3 mb-2">Save</button>
+            <button type="submit" name="btn-edit-user" id="submit-upd-user" class="btn btn-dark w-100 mt-3 mb-2">Save</button>
         </form>
         </div>
         </div>

@@ -5,6 +5,7 @@ $errorName = '';
 $errorEmail = '';
 $errorPassword = '';
 
+
 if(isset($_POST['submit'])){
   if(empty($_POST['name-user'])){
     $errorName = "<p> Field is empty </p>";
