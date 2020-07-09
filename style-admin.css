@@ -9,6 +9,10 @@
     margin: 60px auto;
   }
 
+  header p {
+    font-family: 'Ubuntu', sans-serif;
+  }
+
   .checkbox-lg {
     width: 20px;
     height: 20px;

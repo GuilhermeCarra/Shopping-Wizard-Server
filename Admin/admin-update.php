@@ -19,7 +19,7 @@ $admins = json_decode($adminJson, true);
     <body class="bg-light">
       <div id="inAdminPage" class="d-none"></div>
       <header class="d-flex align-content-center flex-row justify-content-between p-4 bg-white">
-        <p class="font-weight-bold">LOGO</p>
+        <p class="font-weight-bold"><img src="../assets/img/icons/logo.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">Nice Shoes</p>
         <div class="d-flex flex-row">
         <?php
         echo "<p class='pt-2 pr-2'>" . $_SESSION['user'] . "</p>";
