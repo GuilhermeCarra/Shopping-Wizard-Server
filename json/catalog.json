@@ -1,6 +1,6 @@
 {
-  "last_id": 5,
-  "1": {
+  "last_id": 4,
+  "0": {
     "name": "Mock Sneakers",
     "size": {
       "38": "18.95",
@@ -9,7 +9,7 @@
     },
     "color": ["Black", "White", "Red"]
   },
-  "2": {
+  "1": {
     "name": "Zoom Pegasus",
     "size": {
       "36": 36.4,
@@ -18,7 +18,7 @@
     },
     "color": ["Bright Rose", "Champagne", "Black"]
   },
-  "3": {
+  "2": {
     "name": "Free Metcon",
     "size": {
       "36": 30.1,
@@ -27,7 +27,7 @@
     },
     "color": ["Chutney", "Marfil", "Black"]
   },
-  "4": {
+  "3": {
     "name": "SuperRep",
     "size": {
       "39": 80,
@@ -36,7 +36,7 @@
     },
     "color": ["Salvia", "Camo", "Gray"]
   },
-  "5": {
+  "4": {
     "name": "React",
     "size": {
       "40": 36.4,
