@@ -2,7 +2,7 @@
 session_start();
 $adminJson = file_get_contents('../json/admins.json');
 $admins = json_decode($adminJson, true);
-var_dump($admins);
+// var_dump($admins);
 
 ?>
 
@@ -61,12 +61,11 @@ var_dump($admins);
                     '<th scope="row">' . $id . '</th>' .
                     '<td>' . $admin["username"] . '</td>' .
                     '<td>' . $admin["email"] . '</td>' .
-                    '<td><a href="../Admin/edit-user.php<?id='.$id.'"><button type="button" class="btn btn-dark" id="edit-user">Edit</button></a>
-                    <button type="button" class="btn btn-danger">X</button></td>' .
+                    '<td><a href="../Admin/edit-user.php?id='.$id.'"><button type="button" class="btn btn-dark" id="edit-user">Edit</button></a>
+                    <a href="delete-user.php?id='.$id.'"><button type="button" class="btn btn-danger">X</button></a></td>' .
                     '</tr>';
                   }
                 }
-                
                 ?>
               </tbody>
             </table>
