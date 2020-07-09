@@ -2,7 +2,7 @@
 session_start();
 $productJson = file_get_contents('../json/catalog.json');
 $products = json_decode($productJson, true);
-array_shift($products);
+unset($products["last_id"]);
 ?>
 
 <!DOCTYPE html>
@@ -54,14 +54,14 @@ array_shift($products);
               </thead>
               <tbody id="table-products">
                 <?php
-                foreach($products as $id => $product){
+                foreach($products as $id=>$product){
                   echo '<tr>' .
                           '<th scope="row">'.$id.'</th>' .
                           '<td>'.$product['name'].'</td>' .
                           '<td>'. implode('<br>', array_keys($product['size'])) .'</td>' .
                           '<td>'. implode(' €<br>', $product['size']) .' €</td>' .
                           '<td><a href="../Admin/edit-product.php?id='.$id.'"><button type="button" class="btn btn-dark" id="edit-product">Edit</button></a>
-                          <a href="../Admin/delete-product?id='.$id.'"><button type="button" class="btn btn-danger">X</button></a></td>' .
+                          <a href="../Admin/delete-product.php?id='.$id.'"><button type="button" class="btn btn-danger">X</button></a></td>' .
                           '</tr>';
                 }
                 ?>

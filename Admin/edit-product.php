@@ -1,7 +1,24 @@
 <?php
 session_start();
 // echo $_SESSION['user'];
+$catalogJSON = file_get_contents('../json/catalog.json');
+$catalog = json_decode($catalogJSON, true);
+$product = $catalog[$_GET['id']];
 
+if(isset($_POST['btn-edit-product'])){
+  $catalog[$_GET['id']]["name"] = $_POST["product-name"];
+  $catalog[$_GET['id']]["color"][0] = $_POST["product-color"];
+  $catalog[$_GET['id']]["color"][1] = $_POST["product-color2"];
+  $catalog[$_GET['id']]["color"][2] = $_POST["product-color3"];
+  $sizes =  new stdClass();
+  $sizes->{$_POST["size1"]} = $_POST["price1"];
+  $sizes->{$_POST["size2"]} = $_POST["price2"];
+  $sizes->{$_POST["size3"]} = $_POST["price3"];
+  $catalog[$_GET['id']]["size"] = $sizes;
+  $catalogUpdated = json_encode($catalog);
+  file_put_contents('../json/catalog.json', $catalogUpdated);
+  header("Location: admin-product-update.php");
+}
 ?>
 
 
@@ -40,35 +57,51 @@ session_start();
         <!--Div Form Edit Product-->
         <div id="update-product-nb" class="d-flex mx-auto w-50 p-3 mt-5 bg-white rounded">
       <div class="w-75 p-3">
-        <h4 class="font-weight-bold mt-3">Edit Product</h4> <br>
-        <div class="form-group" id="update-product-div">
-          <label for="product">Product title</label>
-          <input type="text" class="form-control border border-dark" id="update-title">
-        </div>
-        <div class="form-group" id="url-u-div">
-          <label for="url">Image URL</label>
-          <input type="url" class="form-control border border-dark" id="update-url">
-        </div>
-        <div class="form-group" id="size-u-div">
-          <label for="size">Size</label>
-          <select class="custom-select custom-select border border-dark">
-            <option selected>Chose size</option>
-            <option value="1">38</option>
-            <option value="2">39</option>
-            <option value="3">40</option>
-          </select>
-          </div>
-        <div class="form-group" id="color-u-div">
-          <label for="color">Color</label>
-          <input type="text" class="form-control border border-dark" id="update-weight">
-        </div>
-        <div class="form-group" id="category-u-div">
-          <div class="d-flex flex-row flex-wrap justify-content-between">
-          </div>
-        </div>
-        <button type="submit" id="submit-u-product" class="btn btn-dark w-100 mt-1 mb-3">Update product</button>
-      </div>
-    </div>
+      <form method="post" action="edit-product.php?id=<?php echo $_GET['id'] ?>" class="w-100">
+              <h4 class="font-weight-bold mt-3">Edit Product</h4> <br>
+              <div class="form-group" id="new-product-div">
+                <label for="product">Product title</label>
+                <input value="<?php echo $product['name'] ?>" type="text" name="product-name" class="form-control border border-dark" id="product-title"> 
+              </div>
+              <div class="form-group" id="size-div">
+              <label for="product">Shoe's Size 1</label>
+                <div class="row">
+                  <div class="col">
+                    <input value="<?php echo array_keys($product['size'])[0] ?>" type="number" name="size1" id="size1" class="form-control border border-dark" placeholder="Size 1">
+                  </div>
+                  <div class="col">
+                    <input value="<?php echo $product['size'][array_keys($product['size'])[0]] ?>" type="number" step=0.01 name="price1" id="color1" class="form-control border border-dark" placeholder="Price 1"> <br>
+                  </div>
+                </div>
+                <label for="product">Shoe's Size 2</label>
+                <div class="row">
+                  <div class="col">
+                    <input value="<?php echo array_keys($product['size'])[1] ?>" type="number" name="size2" id="size2" class="form-control border border-dark" placeholder="Size 2">
+                  </div>
+                  <div class="col">
+                    <input value="<?php echo $product['size'][array_keys($product['size'])[1]] ?>" type="number" step=0.01  name="price2" id="color2" class="form-control border border-dark" placeholder="Price 2"> <br>
+                  </div>
+                </div>
+                <label for="product">Shoe's Size 3</label>
+                <div class="row">
+                  <div class="col">
+                    <input value="<?php echo array_keys($product['size'])[2] ?>" type="number"  name="size3" id="size3" class="form-control border border-dark" placeholder="Size 3">
+                  </div>
+                  <div class="col">
+                    <input value="<?php echo $product['size'][array_keys($product['size'])[2]] ?>" type="number" step=0.01  name="price3" id="color3" class="form-control border border-dark" placeholder="Price 3">
+                  </div>
+                </div>
+              </div>
+              <div class="form-group" id="color-div">
+                <label for="product-color">Color 1:</label>
+                <input value="<?php echo $product['color'][0] ?>" type="text" name="product-color" class="form-control border border-dark" id="product-color"> <br>
+                <label for="product-color2">Color 2:</label>
+                <input value="<?php echo $product['color'][1] ?>" type="text" name="product-color2" class="form-control border border-dark" id="product-color2"> <br>
+                <label for="product-color3">Color 3:</label>
+                <input value="<?php echo $product['color'][2] ?>" type="text" name="product-color3" class="form-control border border-dark" id="product-color3">
+              </div>
+              <button type="submit" name="btn-edit-product" class="btn btn-dark w-100 mt-1 mb-3">Edit product</button>
+            </form>
     <!--Div Form Update Category-->
     <div id="update-category-nb" class="d-none mx-auto w-50 h-25 p-3 mt-5 bg-white rounded">
       <div class=" w-75 p-3">
