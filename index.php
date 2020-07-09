@@ -71,7 +71,7 @@
     <!-- Footer -->
     <footer class="page-footer">
         <div class="footer-copyright text-center py-4">© 2020 Copyright:
-            <a href="/index.php">Nice Shoes</a>
+            <a href="index.php">Nice Shoes</a>
         </div>
     </footer>
     <!-- Footer -->
