@@ -1,68 +1,48 @@
 {
-  "last_id": 2,
-  "0": {
+  "last_id": 5,
+  "1": {
     "name": "Mock Sneakers",
     "size": {
-      "38": 19.95,
-      "39": 21.95,
-      "40": 23.95
+      "38": "18.95",
+      "39": "21.95",
+      "40": "23.95"
     },
-    "color": [
-      "Black",
-      "White",
-      "Red"
-    ]
-  },
-  "1": {
-    "name": "Zoom Pegasus",
-    "size": {
-      "36": 36.40,
-      "38": 38.20,
-      "39": 40.45
-    },
-    "color": [
-      "Bright Rose",
-      "Champagne",
-      "Black"
-    ]
+    "color": ["Black", "White", "Red"]
   },
   "2": {
-    "name": "Free Metcon",
+    "name": "Zoom Pegasus",
     "size": {
-      "36": 30.10,
-      "38": 32.20,
-      "39": 24.40
+      "36": 36.4,
+      "38": 38.2,
+      "39": 40.45
     },
-    "color": [
-      "Chutney",
-      "Marfil",
-      "Black"
-    ]
+    "color": ["Bright Rose", "Champagne", "Black"]
   },
   "3": {
-    "name": "SuperRep",
+    "name": "Free Metcon",
     "size": {
-      "39": 80.00,
-      "40": 82.20,
-      "41": 85.50
+      "36": 30.1,
+      "38": 32.2,
+      "39": 24.4
     },
-    "color": [
-      "Salvia",
-      "Camo",
-      "Gray"
-    ]
+    "color": ["Chutney", "Marfil", "Black"]
   },
   "4": {
+    "name": "SuperRep",
+    "size": {
+      "39": 80,
+      "40": 82.2,
+      "41": 85.5
+    },
+    "color": ["Salvia", "Camo", "Gray"]
+  },
+  "5": {
     "name": "React",
     "size": {
-      "40": 36.40,
-      "41": 38.20,
+      "40": 36.4,
+      "41": 38.2,
       "42": 40.45
     },
-    "color": [
-      "Aqua",
-      "Red",
-      "Black"
-    ]
+    "color": ["Aqua", "Red", "Black"]
   }
 }
