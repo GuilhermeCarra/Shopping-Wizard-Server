@@ -2,8 +2,7 @@
 session_start();
 $productJson = file_get_contents('../json/catalog.json');
 $products = json_decode($productJson, true);
-var_dump($products);
-
+array_shift($products);
 ?>
 
 <!DOCTYPE html>
@@ -54,21 +53,16 @@ var_dump($products);
                 </tr>
               </thead>
               <tbody id="table-products">
-                <tr>
-                  <th scope="row">00001</th>
-                  <td>Product name</td>
-                  <td>38</td>
-                  <td>19.95€</td>
-                  <td><a href="../Admin/edit-product.php"><button type="button" class="btn btn-dark" id="edit-product">Edit</button></a>
-                    <button type="button" class="btn btn-danger">X</button></td>
-                </tr>
                 <?php
                 foreach($products as $id => $product){
-                  if($id != 'last_id'){
-                    echo $id. "<br>";
-                    var_dump($product);
-                    echo "<br>";
-                  }
+                  echo '<tr>' .
+                          '<th scope="row">'.$id.'</th>' .
+                          '<td>'.$product['name'].'</td>' .
+                          '<td>'. implode('<br>', array_keys($product['size'])) .'</td>' .
+                          '<td>'. implode(' €<br>', $product['size']) .' €</td>' .
+                          '<td><a href="../Admin/edit-product.php?id='.$id.'"><button type="button" class="btn btn-dark" id="edit-product">Edit</button></a>
+                          <a href="../Admin/delete-product?id='.$id.'"><button type="button" class="btn btn-danger">X</button></a></td>' .
+                          '</tr>';
                 }
                 ?>
               </tbody>
