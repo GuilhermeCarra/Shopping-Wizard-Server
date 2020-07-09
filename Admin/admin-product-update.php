@@ -1,6 +1,8 @@
 <?php
 session_start();
-
+$productJson = file_get_contents('../json/catalog.json');
+$products = json_decode($productJson, true);
+var_dump($products);
 
 ?>
 
@@ -47,7 +49,7 @@ session_start();
                   <th scope="col">ID</th>
                   <th scope="col">Name</th>
                   <th scope="col">Size</th>
-                  <th scope="col">Color</th>
+                  <th scope="col">Price</th>
                   <th scope="col">Edit</th>
                 </tr>
               </thead>
@@ -56,7 +58,7 @@ session_start();
                   <th scope="row">00001</th>
                   <td>Product name</td>
                   <td>38</td>
-                  <td>Blue</td>
+                  <td>19.95€</td>
                   <td><a href="../Admin/edit-product.php"><button type="button" class="btn btn-dark" id="edit-product">Edit</button></a>
                     <button type="button" class="btn btn-danger">X</button></td>
                 </tr>

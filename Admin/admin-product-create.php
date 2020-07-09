@@ -1,6 +1,38 @@
 <?php
 session_start();
 
+$errorProductName = '';
+$errorUrl = '';
+$errorColor = '';
+$errorSize = '';
+
+if(isset($_POST['submit-product'])){
+  if(empty($_POST['product-name'])){
+    $errorProductName = "<p> Field is empty </p>";
+}else if(empty($_POST['url-image'])){
+    $errorUrl = "<p> Field is empty </p>";
+}else if(empty( $_POST['product-color'])){
+    $errorColor = "<p> Field is empty </p>";
+}else if($_POST['product-size'] === 'select-option'){
+    $errorSize = "<p> Select a field</p>";
+}else{
+  if(file_exists('../json/catalog.json')){
+    $currentDataProduct = file_get_contents('../json/catalog.json');
+    $dataProduct = substr($currentDataProduct, 0, -1);
+    $objectProduct = new stdClass();
+    $objectProduct->name = $_POST['product-name'];
+    $objectProduct->size = $_POST['product-size'];
+    $objectProduct->color = $_POST['product-color'];
+
+    $idProduct = 0;
+
+    $finalProduct = $dataProduct . ',' . '"' . $idProduct. '":' . json_encode($objectProduct) . "}";
+    if(file_put_contents('../json/catalog.json', $finalProduct)){
+      echo $finalProduct;
+    }
+  }
+}
+}
 
 ?>
 
@@ -40,69 +72,37 @@ session_start();
         <!--Div Form Add Product-->
         <div id="new-product" class="d-flex mx-auto w-50 p-3 mt-5 bg-white rounded">
           <div class="w-75 p-3">
-          <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>" class="w-100">
+          <form method="post" class="w-100">
           <h4 class="font-weight-bold mt-3">New Product</h4> <br>
           <div class="form-group" id="new-product-div">
             <label for="product">Product title</label>
             <input type="text" name="product-name" class="form-control border border-dark" id="product-title">
           </div>
           <?php
-                if ($_SERVER["REQUEST_METHOD"] == "POST"){
-
-                  $productName = $_POST['product-name'];
-
-                  if (empty($productName)) {
-                      echo "<p>Field is empty <p>";
-                  } else {
-                  }
-                }
+          echo $errorProductName;
                 ?>
-          <div class="form-group" id="url-div">
-            <label for="url">Image URL</label>
-            <input type="url" name="url-image" class="form-control border border-dark" id="product-url">
+        <div class="form-group" id="size-div">
+          <label for="size">Size</label>
+          <select name="product-size" class="custom-select custom-select border border-dark">
+            <option value="select-option" selected>Chose size</option>
+            <option value="38">38</option>
+            <option value="39">39</option>
+            <option value="40">40</option>
+          </select>
           </div>
           <?php
-                if ($_SERVER["REQUEST_METHOD"] == "POST"){
-
-                  $URLimage = $_POST['url-image'];
-
-                  if (empty($URLimage)) {
-                      echo "<p>Field is empty <p>";
-                  } else {
-                  }
-                }
-                ?>
-          <div class="form-group" id="size-div">
-            <label for="size">Size</label>
-            <input type="number" name="product-size" class="form-control border border-dark" id="product-size">
-          </div>
-          <?php
-                if ($_SERVER["REQUEST_METHOD"] == "POST"){
-
-                  $productSize = $_POST['product-size'];
-
-                  if (empty($productSize)) {
-                      echo "<p>Field is empty <p>";
-                  } else {
-                  }
-                }
-                ?>
+          echo $errorSize;
+          ?>
           <div class="form-group" id="color-div">
             <label for="color">Color</label>
-            <input type="text" name="product-color" class="form-control border border-dark" id="product-color">
+            <input type="text" name="product-color" class="form-control border border-dark" id="product-color"> <br>
+            <input type="text" name="product-color2" class="form-control border border-dark" id="product-color2"> <br>
+            <input type="text" name="product-color3" class="form-control border border-dark" id="product-color3">
           </div>
           <?php
-                if ($_SERVER["REQUEST_METHOD"] == "POST"){
-
-                  $productColor = $_POST['product-color'];
-
-                  if (empty($productColor)) {
-                      echo "<p>Field is empty <p>";
-                  } else {
-                  }
-                }
-                ?>
-          <button type="submit" id="submit-n-product" class="btn btn-dark w-100 mt-1 mb-3">Create product</button>
+          echo $errorColor;
+          ?>
+          <button type="submit" name="submit-product" id="submit-n-product" class="btn btn-dark w-100 mt-1 mb-3">Create product</button>
         </div>
         </div>
         </form>

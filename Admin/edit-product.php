@@ -49,12 +49,17 @@ session_start();
           <label for="url">Image URL</label>
           <input type="url" class="form-control border border-dark" id="update-url">
         </div>
-        <div class="form-group" id="stock-u-div">
-          <label for="strock">Size</label>
-          <input type="number" class="form-control border border-dark" id="update-stock">
-        </div>
-        <div class="form-group" id="weight-u-div">
-          <label for="weight">Color</label>
+        <div class="form-group" id="size-u-div">
+          <label for="size">Size</label>
+          <select class="custom-select custom-select border border-dark">
+            <option selected>Chose size</option>
+            <option value="1">38</option>
+            <option value="2">39</option>
+            <option value="3">40</option>
+          </select>
+          </div>
+        <div class="form-group" id="color-u-div">
+          <label for="color">Color</label>
           <input type="text" class="form-control border border-dark" id="update-weight">
         </div>
         <div class="form-group" id="category-u-div">

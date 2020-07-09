@@ -1,6 +1,8 @@
 <?php
 session_start();
-
+$adminJson = file_get_contents('../json/admins.json');
+$admins = json_decode($adminJson, true);
+var_dump($admins);
 
 ?>
 
@@ -46,19 +48,26 @@ session_start();
               <thead class="thead-dark">
                 <tr>
                   <th scope="col">ID</th>
-                  <th scope="col">Full name</th>
+                  <th scope="col">Username</th>
                   <th scope="col">Email</th>
                   <th scope="col">Edit</th>
                 </tr>
               </thead>
               <tbody id="user-table">
-                <tr>
-                  <th scope="row">00001</th>
-                  <td>Anna Mark</td>
-                  <td>anna@gmail.com</td>
-                  <td><a href="../Admin/edit-user.php"><button type="button" class="btn btn-dark" id="edit-user">Edit</button></a>
-                    <button type="button" class="btn btn-danger">X</button></td>
-                </tr>
+                <?php
+                foreach($admins as $id => $admin){
+                  if($id != 'last_id'){
+                    echo '<tr>'.
+                    '<th scope="row">' . $id . '</th>' .
+                    '<td>' . $admin["username"] . '</td>' .
+                    '<td>' . $admin["email"] . '</td>' .
+                    '<td><a href="../Admin/edit-user.php<?id='.$id.'"><button type="button" class="btn btn-dark" id="edit-user">Edit</button></a>
+                    <button type="button" class="btn btn-danger">X</button></td>' .
+                    '</tr>';
+                  }
+                }
+                
+                ?>
               </tbody>
             </table>
           </div>
