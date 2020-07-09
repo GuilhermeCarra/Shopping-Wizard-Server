@@ -79,7 +79,7 @@ if(isset($_POST['submit'])){
             <form method="post" class="w-100">
               <h4 class="font-weight-bold mt-3">New manager</h4> <br>
               <div class="form-group" id="new-manager-div">
-                <label for="name">Full name</label>
+                <label for="name">Username</label>
                 <input type="text" name="name-user" class="form-control border border-dark" id="user-name">
               </div>
                 <?php

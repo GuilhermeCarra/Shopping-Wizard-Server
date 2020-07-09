@@ -1,6 +1,12 @@
 <?php
 session_start();
 // echo $_SESSION['user'];
+$adminJson = file_get_contents('../json/admins.json');
+$admins = json_decode($adminJson, true);
+var_dump($admins);
+
+
+
 
 ?>
 
@@ -39,10 +45,11 @@ session_start();
         </div>
             <div id="edit-manager" class="d-flex mx-auto w-50 h-25 p-3 mt-5 bg-white rounded">
         <div class=" w-75 p-3">
+        <form action="">
             <h4 class="font-weight-bold mt-3">Edit manager</h4> <br>
             <div class="form-group" id="edit-manager-div">
-            <label for="name">Full name</label>
-            <input type="text" class="form-control border border-dark" id="user-name-u">
+            <label for="name">Username</label>
+            <input type="text" value="" class="form-control border border-dark" id="user-name-u">
             </div>
             <div class="form-group" id="email-manager-u-div">
             <label for="name">Email</label>
@@ -53,6 +60,7 @@ session_start();
             <input type="password" class="form-control border border-dark" id="user-password-u">
             </div>
             <button type="submit" id="submit-upd-user" class="btn btn-dark w-100 mt-3 mb-2">Save</button>
+        </form>
         </div>
         </div>
     </div>
