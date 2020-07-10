@@ -10,15 +10,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Jordan shoes</title>
+    <link rel="icon" type="image/png" href="assets/img/icons/favicon.png">
+    <title>Nice shoes</title>
 </head>
 
-<body onload="">
+<body>
     <div id="box_0">
-        <header>
-            <div class="logo"><b>LOGO</b></div>
-        </header>
+        <?php include('header.php') ?>
         <main class="d__flex" id="box_1_main">
             <div class="main_left d__flex">
                 <div id="ml_preview">
@@ -64,27 +64,28 @@
                         <!--color-->
                         Color
                         <div id="mr_color" class="main_normal_text">
-                            <img class="mr_color_image" src="">
-                            <!--Img1-->
-                            <img class="mr_color_image" src="">
-                            <!--Img2-->
-                            <img class="mr_color_image" src="">
-                            <!--Img3-->
+                            <img class="mr_color_image" src="">     <!--Img1-->
+                            <img class="mr_color_image" src="">     <!--Img2-->
+                            <img class="mr_color_image" src="">     <!--Img3-->
                         </div>
                     </div>
                 </div>
                 <button class="black_button" onclick="buy()">BUY</button>
             </div>
         </main>
-        <footer>
-            <b>Shop 2020</b>
-        </footer>
+        <!-- Footer -->
+        <footer class="page-footer">
+            <div class="footer-copyright text-center py-4">© 2020 Copyright:
+            <a href="index.php">Nice Shoes</a>
+            </div>
+        </footer> <!-- Footer -->
     </div>
+
     <div id="FormPage">
-        <header style="position:relative">
+        <header>
             <div class="connector"></div>
 
-            <ul class="d__flex" style="position:absolute; z-index: 1;">
+            <ul class="d__flex">
                 <li class="flex_column" >
                     <div class="top_menu_text">Profile</div>
                     <div class="div_circle"></div>
@@ -113,29 +114,28 @@
                 <h2>Step 1 - Profile</h2>
                 <fieldset>
                     <label for="user">Username<span class="required_dot">*</span></label><br>
-                    <input type="text" class="step1_input" name="username" autocomplete="off" value="beronidas">
+                    <input type="text" class="step1_input" name="username" autocomplete="off" placeholder="Username">
                 </fieldset><br>
 
                 <fieldset>
                     <label for="email">Email<span class="required_dot">*</span></label><br>
-                    <input type="email" class="step1_input" name="email" autocomplete="off"
-                        value="beron@gmail.com">
+                    <input type="email" class="step1_input" name="email" autocomplete="off" placeholder="email@email.com">
                 </fieldset><br>
 
                 <fieldset>
                     <label for="password">Password<span class="required_dot">*</span></label><br>
                     <input type="password" class="step1_input" name="password" autocomplete="off"
-                        value="abetoMayor3">
+                        placeholder="Abcdef1!">
                 </fieldset><br>
 
                 <fieldset>
-                    <label for="confirm password">Confirm Pasword<span class="required_dot">*</span></label><br>
-                    <input type="password" class="step1_input" name="password2" autocomplete="off"
-                        value="abetoMayor3">
-                </fieldset><br>
+                    <label for="confrim password">Confirm Pasword<span class="required_dot">*</span></label><br>
+                    <input type="password" class="step1_input" name="confrim password" autocomplete="off"
+                        placeholder="Abcdef1!">
+                </fieldset>
             </form>
-
         </main>
+
         <main id="box_2">
             <form id="form-address">
                 <h2>Step 2 - Address</h2>
@@ -194,7 +194,8 @@
 
                         <option data-countryCode="GRC" value="30">GRC</option>
                     </select>
-                    <input type="tel" class="step2_input" autocomplete="off" name="phone" value="798213456" style="position:absolute;margin-left:-1px">
+                    <input type="tel" class="step2_input" autocomplete="off" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"
+                        placeholder="798 213 456">
                 </fieldset><br>
 
                 <input type="checkbox" class="radio" name="checkbox" autocomplete="off">
@@ -204,6 +205,7 @@
             </form>
 
         </main>
+
         <main id="box_3">
 
             <h2>Step 3 - Shipping</h2>
@@ -231,51 +233,41 @@
                 <div id="gift_text">
                         <label for="message">Gift message</label><br>
                         <textarea name="" cols="30" rows="5"></textarea><br><br>
-                    <!-- <div class="fileinputs"><input type="file" class="file" />
-
-                        <div class="fakefile"><input />
-                     </div> -->
                         <label for="gift image">Gift wrapper image</label><br>
-                        <input type="file"id="filename"  name="filename" style="width: 0.1px; height: 0.1px; opacity: 0;overflow: hidden;position: absolute;z-index: -1;">
-                        <label for="filename" style="cursor:pointer; text-align: center;">Select image <i class="far fa-file" style="font-size: 18px;"></i></label>
+                        <input type="file" id="filename" name="filename">
+                        <label for="filename" class="file_label">Select image <i class="far fa-file"></i></label>
                 </div>
             </form>
-        </main> 
-        <br>
-        <footer class="reverse_row">
+        </main>
+
+        <footer class="reverse_row py-4">
             <div class="main_right reverse_row">
                 <button class="black_button">Next</button>
-                <button class="clear_button">Clear form</button>
+                <button class="clear_button mr-3">Clear form</button>
             </div>
         </footer>
         <div class="background_grey">
-        <main>
-            <div id="box_4" style="margin: 0;">
-            <h2>Step 4 - Finish</h2>
+            <div id="box_4">
+                <h2>Step 4 - Finish</h2>
                 <form action="" class="d__flex">
-                    <div class="background_white main_left">
-                        <h2 id="y_purchase">Your purchase</h2>
+                    <div class="background_white main_left_final">
+                        <h3 id="y_purchase">Your purchase</h3>
                         <div class="d__flex">
                             <img class="mr_color_image" src="" alt="" id="finish_image">
                             <div class="final_info">
                                 <h4 id="final_product_name">Black Air Jordan 1 Mid </h4>
                                 <div class="main_normal_text finish_padding">Size:  <b id="final_size">M</b></div>
                                 <div class="main_normal_text finish_padding">Color: <div id="final_color"></div></div>
-                                <div class="main_normal_text finish_padding" id="estimate">ESTIMATE DELIVERY DATE:</div>
-                                <div class="main_normal_text finish_padding">Between <b id="f_date_1"></b> and <b id="f_date_2"></b> </div>
-                                
+                                <div class="main_normal_text" id="estimate">ESTIMATE DELIVERY DATE:</div>
+                                <div class="main_normal_text">Between <b id="f_date_1"></b> and <b id="f_date_2"></b> </div>
                             </div>
                         </div>
 
-                        <!-- for checkbox input should go before label -->
-                        <input type="checkbox" id="f_required_checkbox" name="terms" class="radio" id="terms">
-                        <label for="terms" class="fix" id="f_conditions">I have read and accept the terms and conditions.</label><br>
-                        <button class="black_button" id="f_required_buynow">Buy now</button>
                     </div>
                     <div class="background_white main_right">
                         <h3 class="grey_line">Your order</h3>
                         <div class="main_normal_text">
-                            Sneackers: <b id="f_price">19.95€</b>
+                            Product: <b id="f_price">19.95€</b>
                         </div>
                         <div class="main_normal_text">
                             Shipping Cost: <b id = "f_shipping"></b>
@@ -285,11 +277,13 @@
                             Total: <b id="f_total"></b>
                         </div>
                     </div>
-
                 </form>
+                <!-- for checkbox input should go before label -->
+                <input type="checkbox" id="f_required_checkbox" name="terms" class="radio" id="terms">
+                <label for="terms" class="fix" id="f_conditions">I have read and accept the terms and conditions.</label><br>
+                <button class="black_button" id="f_required_buynow">Buy now</button>
             </div>
 
-        </main>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>

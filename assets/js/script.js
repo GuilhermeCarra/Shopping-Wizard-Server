@@ -1,7 +1,7 @@
 var product =[];
 var productFinal = {};
-
 productRequest();
+
 function productRequest() {
     var productReq = new XMLHttpRequest();
     productReq.onload = function() {
@@ -131,10 +131,34 @@ var reviewTime = document.getElementById("time_alert");
 
 //Function buy starts the process of purchase
 function buy(){
+    // start 5 minutes time count
+    warningInterval = setInterval( () => {
+        timeLeft--;
+        if (timeLeft == 0) resetBuy();
+        reviewTime.innerText = "You started registration " + (5 - timeLeft) + " minutes ago. You have " + timeLeft + " minutes left.";
+        reviewTime.style.display = "block";
+        setTimeout(() => reviewTime.style.display = "none", 6000);
+    }, 60000);
+
+    timerInterval = setInterval (() => {
+        timerSec++;
+        if (timerSec == 60) {
+            timerMin++;
+            timerSec=0;
+        }
+    }, 1000);
+
     var divCircles = document.getElementsByClassName("div_circle");
     var buttons = document.getElementsByClassName("black_button");
     //for each next button resetting the time countdown - 5 minutes for each step of registration
-    for(let button of buttons) { button.addEventListener("click", function(event){event.preventDefault(); nextStep()});}
+    for(let button of buttons) {
+        if (!timeOver && button.innerText != "BUY") {
+            button.addEventListener("click", function(event){
+                event.preventDefault();
+                nextStep();
+            });
+        }
+    }
 
     document.getElementById("FormPage").style.display = "block";
     //adding properties of chosen product to final page summary:
@@ -147,12 +171,17 @@ function buy(){
     nextStep();
     async function nextStep() {
         if (page > 0) {
+            if (page == 3) {
+                document.querySelector(".background_grey").style.display = "block"
+            }
             if(page == 4){
                 clearInterval(warningInterval);
                 clearInterval(timerInterval);
                 document.getElementById("f_required_buynow").style.display = "none";
                 document.getElementById("f_required_checkbox").style.display = "none";
                 document.getElementById("f_conditions").innerHTML = "You purchase took " + timerMin + " minutes and "+timerSec+" seconds";
+                document.getElementById("f_conditions").classList.add("f_time");
+                document.getElementById("f_conditions").classList.remove("fix");
                 document.getElementById("y_purchase").innerHTML = "Your order is complete! Thank You!";
                 return;
             } else if(page == 3) document.getElementsByTagName("footer")[1].style.display = "none";
@@ -160,9 +189,6 @@ function buy(){
             let inputArr = document.getElementsByClassName("step" + page + "_input");
             await checkAnswers(inputArr, page);
         }
-        
-        clearInterval(warningInterval);
-        timeLeft = 5;
         divCircles[page].style.backgroundColor = "#888";
         page++;
 
@@ -171,27 +197,28 @@ function buy(){
     }
 }
 
-var warningInterval = setInterval(() => {
-    if (timeLeft == 0) resetBuy();
-    timeLeft--;
-    reviewTime.innerText = "You started registration " + (5 - timeLeft) + " minutes ago. You have " + timeLeft + " minutes left.";
-    reviewTime.style.backgroundColor = "#d9d9d9";
-}, 60000);
-
+var warningInterval;
+var timeOver = false;
 var timerSec = 0;
 var timerMin = 0;
-var timerInterval = setInterval (() => {
-    timerSec++;
-    if (timerSec == 60) {
-        timerMin++;
-        timerSec=0;
-    }
-}, 1000);
+var timerInterval;
 
 function resetBuy() {
+    timeOver = true;
     clearInterval(warningInterval);
+    clearInterval(timerInterval);
+    timerSec = 0;
+    timerMin = 0;
     page = 0;
+    timeLeft = 5;
     document.getElementById("box_0").style.display = "block";
+    document.getElementsByTagName("footer")[1].style.display = "flex";
+    document.getElementById("box_1").style.display = "block";
+    document.getElementById("box_2").style.display = "none";
+    document.getElementById("box_3").style.display = "none";
+    document.getElementById("box_4").style.display = "none";
+    document.getElementById("box_4").style.display = "none";
+    document.querySelector(".background_grey").style.display = "none"
     document.getElementById("FormPage").style.display = "none";
 }
 
@@ -225,3 +252,22 @@ function changePreviewImages(colorNumber) {
     for (let i = 0; i < document.getElementsByClassName("ml_preview_image").length; i++)
     document.getElementsByClassName("ml_preview_image")[i].src = "assets/img/products/"+ product.id + "-" + product.color[colorNumber] + "-" + i + ".jpg";
 }
+
+
+//!script admin //
+
+// search admins
+$("#search-user-table").on("keyup", function () {
+    const value = $(this).val().toLowerCase();
+    $("#user-table tr").filter(function () {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+    });
+});
+
+// search product
+$("#search-product-table").on("keyup", function () {
+    const value = $(this).val().toLowerCase();
+    $("#table-products tr").filter(function () {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+    });
+})

@@ -1,7 +1,5 @@
 <?php
-    // if (!isset($_GET["productId"])) header("Location: index.php");
     session_start();
-    // $_SESSION["productId"] = $_GET["productId"];
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +15,7 @@
 
     <body>
         <nav class="navbar navbar-light bg-light sticky-top">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.php">
                 <img src="assets/img/icons/logo.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
                 Nice Shoes
             </a>
@@ -29,8 +27,8 @@
                 <li class="layer" data-depth="0.2"><img src="assets/img/404/2.png"></li>
                 <li class="layer" data-depth="0.4"><img src="assets/img/404/3.png"></li>
                 <li class="layer w-100 h-100 d-flex flex-column justify-content-center align-items-center" data-depth="0">
-                    <span class="title-404">404</span>
-                    <span class="text-404">Oh no! Feeling like Cinderella? </span>
+                    <span class="title-404" >404</span>
+                    <span class="text-404" >Oh no! Feeling like Cinderella? </span>
                 </li>
                 <li class="layer" data-depth="0.6"><img src="assets/img/404/4.png"></li>
                 <li class="layer" data-depth="0.8"><img src="assets/img/404/5.png"></li>
@@ -42,9 +40,6 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
-        <script>
-            var scene = document.getElementById('scene');
-            var parallaxInstance = new Parallax(scene);
-        </script>
+        <script src="assets/js/notfound.js"></script>
     </body>
 </html>

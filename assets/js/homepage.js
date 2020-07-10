@@ -22,14 +22,14 @@ function printCatalog() {
     for (let n = 0; n < Object.keys(catalog).length; n++) {
         if (Object.keys(catalog)[n] != "last_id") {
             let id = Object.keys(catalog)[n];
-            let color = catalog[n].color[Object.keys(catalog[n].color)[0]];
-            let price = catalog[n].size[Object.keys(catalog[n].size)[0]];
+            let color = catalog[Object.keys(catalog)[n]].color[Object.keys(catalog[Object.keys(catalog)[n]].color)[0]];
+            let price = catalog[Object.keys(catalog)[n]].size[Object.keys(catalog[Object.keys(catalog)[n]].size)[0]];
             $("#products_list").append(
                 $(emptyCol).append(
                     $(card).append(
                         $(img).attr("src", "assets/img/products/"+id+"-"+color+"-0.jpg").data("id",id).click(requestProduct),
                         $(cardBody).append(
-                            $(cardTitle).text(catalog[n].name),
+                            $(cardTitle).text(catalog[Object.keys(catalog)[n]].name),
                             $(cardText).text(price + " €/pc")
                         )
                     )
