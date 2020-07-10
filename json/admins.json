@@ -1,1 +1,14 @@
-{"last_id":2,"1":{"email":"admin@gmail.com","username":"admin","password":"admin","lastConnection":1593787854},"2":{"email":"carlota@gmail.com","username":"carlota","password":"123"}}
+{
+    "last_id": 2,
+    "1": {
+        "email": "admin@gmail.com",
+        "username": "admin",
+        "password": "admin",
+        "lastConnection": 1593787854
+    },
+    "2": {
+        "email": "carlota@gmail.com",
+        "username": "carlota",
+        "password": "123"
+    }
+}
