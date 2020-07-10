@@ -45,6 +45,29 @@ if(isset($_POST['submit-product'])){
     $finalProduct = $dataProduct . ',' . '"' . $lastId. '":' . json_encode($objectProduct) . "}";
 
     file_put_contents('../json/catalog.json', $finalProduct);
+
+    $target_dir = "../assets/img/products/";
+    foreach($_FILES['color1']['name'] as $key => $value) {
+      $type = ltrim(strstr($_FILES['color1']['type'][$key], '/'), '/');
+      if ($type == 'png' || $type == 'jpg' || $type == 'jpeg'){
+        $target_file = $target_dir . $lastId . '-' . $_POST['product-color'] . '-' . $key . '.' . $type;
+        move_uploaded_file($_FILES['color1']['tmp_name'][$key] ,$target_file);
+      }
+    }
+    foreach($_FILES['color2']['name'] as $key => $value) {
+      $type = ltrim(strstr($_FILES['color2']['type'][$key], '/'), '/');
+      if ($type == 'png' || $type == 'jpg' || $type == 'jpeg'){
+        $target_file = $target_dir . $lastId . '-' . $_POST['product-color2'] . '-' . $key . '.' . $type;
+        move_uploaded_file($_FILES['color2']['tmp_name'][$key] ,$target_file);
+      }
+    }
+    foreach($_FILES['color3']['name'] as $key => $value) {
+      $type = ltrim(strstr($_FILES['color3']['type'][$key], '/'), '/');
+      if ($type == 'png' || $type == 'jpg' || $type == 'jpeg'){
+        $target_file = $target_dir . $lastId . '-' . $_POST['product-color3'] . '-' . $key . '.' . $type;
+        move_uploaded_file($_FILES['color3']['tmp_name'][$key] ,$target_file);
+      }
+    }
   }
 }
 
@@ -128,7 +151,8 @@ if(isset($_POST['submit-product'])){
               </div>
               <div class="form-group" id="color-div">
                 <label for="product-color">Color 1:</label>
-                <input type="text" name="product-color" class="form-control border border-dark" id="product-color"> <br>
+                <input type="text" name="product-color" class="form-control border border-dark" id="product-color">
+                <input type="file"><br>
                 <label for="product-color2">Color 2:</label>
                 <input type="text" name="product-color2" class="form-control border border-dark" id="product-color2"> <br>
                 <label for="product-color3">Color 3:</label>
