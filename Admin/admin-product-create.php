@@ -152,11 +152,13 @@ if(isset($_POST['submit-product'])){
               <div class="form-group" id="color-div">
                 <label for="product-color">Color 1:</label>
                 <input type="text" name="product-color" class="form-control border border-dark" id="product-color">
-                <input type="file"><br>
+                <input type="file" class="form-control-file" id="fileToUpload" multiple name="color1[]"><br>
                 <label for="product-color2">Color 2:</label>
                 <input type="text" name="product-color2" class="form-control border border-dark" id="product-color2"> <br>
+                <input type="file" class="form-control-file" id="fileToUploa2" multiple name="color2[]"><br>
                 <label for="product-color3">Color 3:</label>
                 <input type="text" name="product-color3" class="form-control border border-dark" id="product-color3">
+                <input type="file" class="form-control-file" id="fileToUploa3" multiple name="color3[]"><br>
                 <?php echo $errorColor; ?>
               </div>
               <button type="submit" name="submit-product" id="submit-n-product" class="btn btn-dark w-100 mt-1 mb-3">Create product</button>
