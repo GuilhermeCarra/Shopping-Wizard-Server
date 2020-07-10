@@ -47,25 +47,26 @@ if(isset($_POST['submit-product'])){
     file_put_contents('../json/catalog.json', $finalProduct);
 
     $target_dir = "../assets/img/products/";
-    foreach($_FILES['color1']['name'] as $key => $value) {
-      $type = ltrim(strstr($_FILES['color1']['type'][$key], '/'), '/');
-      if ($type == 'png' || $type == 'jpg' || $type == 'jpeg'){
-        $target_file = $target_dir . $lastId . '-' . $_POST['product-color'] . '-' . $key . '.' . $type;
-        move_uploaded_file($_FILES['color1']['tmp_name'][$key] ,$target_file);
+    foreach($_FILES['colors1']['name'] as $key => $value) {
+      $type = ltrim(strstr($_FILES['colors1']['type'][$key], '/'), '/');
+      if ($type == 'jpg' || $type == 'jpeg'){
+        // $target_file = $target_dir . $lastId . '-' . $_POST['product-color'] . '-' . $key . '.' . $type;
+        $target_file = $target_dir . $lastId . '-' . $_POST['product-color'] . '-' . $key . '.jpg';
+        move_uploaded_file($_FILES['colors1']['tmp_name'][$key] ,$target_file);
       }
     }
-    foreach($_FILES['color2']['name'] as $key => $value) {
-      $type = ltrim(strstr($_FILES['color2']['type'][$key], '/'), '/');
-      if ($type == 'png' || $type == 'jpg' || $type == 'jpeg'){
-        $target_file = $target_dir . $lastId . '-' . $_POST['product-color2'] . '-' . $key . '.' . $type;
-        move_uploaded_file($_FILES['color2']['tmp_name'][$key] ,$target_file);
+    foreach($_FILES['colors2']['name'] as $key => $value) {
+      $type = ltrim(strstr($_FILES['colors2']['type'][$key], '/'), '/');
+      if ($type == 'jpg' || $type == 'jpeg'){
+        $target_file = $target_dir . $lastId . '-' . $_POST['product-color2'] . '-' . $key . '.jpg';
+        move_uploaded_file($_FILES['colors2']['tmp_name'][$key] ,$target_file);
       }
     }
-    foreach($_FILES['color3']['name'] as $key => $value) {
-      $type = ltrim(strstr($_FILES['color3']['type'][$key], '/'), '/');
-      if ($type == 'png' || $type == 'jpg' || $type == 'jpeg'){
-        $target_file = $target_dir . $lastId . '-' . $_POST['product-color3'] . '-' . $key . '.' . $type;
-        move_uploaded_file($_FILES['color3']['tmp_name'][$key] ,$target_file);
+    foreach($_FILES['colors3']['name'] as $key => $value) {
+      $type = ltrim(strstr($_FILES['colors3']['type'][$key], '/'), '/');
+      if ($type == 'jpg' || $type == 'jpeg'){
+        $target_file = $target_dir . $lastId . '-' . $_POST['product-color3'] . '-' . $key . '.jpg';
+        move_uploaded_file($_FILES['colors3']['tmp_name'][$key] ,$target_file);
       }
     }
   }
@@ -112,7 +113,7 @@ if(isset($_POST['submit-product'])){
         <!--Div Form Add Product-->
         <div id="new-product" class="d-flex mx-auto w-50 p-3 mt-5 bg-white rounded">
           <div class="w-75 p-3">
-            <form method="post" class="w-100">
+            <form method="post" class="w-100" enctype="multipart/form-data">
               <h4 class="font-weight-bold mt-3">New Product</h4> <br>
               <div class="form-group" id="new-product-div">
                 <label for="product">Product title</label>
@@ -151,14 +152,14 @@ if(isset($_POST['submit-product'])){
               </div>
               <div class="form-group" id="color-div">
                 <label for="product-color">Color 1:</label>
-                <input type="text" name="product-color" class="form-control border border-dark" id="product-color">
-                <input type="file" class="form-control-file" id="fileToUpload" multiple name="color1[]"><br>
+                <input type="text" name="product-color" class="form-control border border-dark" id="product-color"><br>
+                <input type="file" class="form-control-file" id="fileToUpload" multiple name="colors1[]"><br>
                 <label for="product-color2">Color 2:</label>
                 <input type="text" name="product-color2" class="form-control border border-dark" id="product-color2"> <br>
-                <input type="file" class="form-control-file" id="fileToUploa2" multiple name="color2[]"><br>
+                <input type="file" class="form-control-file" id="fileToUpload2" multiple name="colors2[]"><br>
                 <label for="product-color3">Color 3:</label>
-                <input type="text" name="product-color3" class="form-control border border-dark" id="product-color3">
-                <input type="file" class="form-control-file" id="fileToUploa3" multiple name="color3[]"><br>
+                <input type="text" name="product-color3" class="form-control border border-dark" id="product-color3"><br>
+                <input type="file" class="form-control-file" id="fileToUpload3" multiple name="colors3[]"><br>
                 <?php echo $errorColor; ?>
               </div>
               <button type="submit" name="submit-product" id="submit-n-product" class="btn btn-dark w-100 mt-1 mb-3">Create product</button>
